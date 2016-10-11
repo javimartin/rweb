@@ -36,46 +36,150 @@
         display: block;
     }
 
-    .text1 {
-        text-align: center;
-        margin: 150px;
-    }
-
     .logo-r {
-        width: 100px;
-        height: 100px;
+        height: 90px;
     }
 
-    .img-separator {
-        
+    /* Extra small devices (phones, up to 480px) */
+    @media screen and (max-width: 767px) {
+        h1 {
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 26.4px;
+        }
+
+        h2 {
+            font-size: 10px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 15.4px;
+        }
+
+        p {
+            font-size: 10px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .text1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .img-card {
+            width: 310px;
+        }
     }
 
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        h1 {
+            font-size: 20px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 26.4px;
+        }
 
-    h1 {
-        font-family: "Open Sans";
-        font-size: 24px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 500;
-        line-height: 26.4px;
+        h2 {
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 15.4px;
+        }
+
+        p {
+            font-size: 10px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .text1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .img-card {
+            width: 310px;
+        }
     }
+    /* tablets/desktops and up ----------- */
+    @media (min-width: 992px) and (max-width: 1199px) {
+        h1 {
+            font-size: 24px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 26.4px;
+        }
 
-    h2 {
-        font-family: "Open Sans";
-        font-size: 14px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 500;
-        line-height: 15.4px;
+        h2 {
+            font-size: 18px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 15.4px;
+        }
+
+        p {
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .text1 {
+            text-align: center;
+            margin-top: 150px;
+            margin-bottom: 150px;
+
+        }
     }
+    /* large desktops and up ----------- */
+    @media screen and (min-width: 1200px) {
+        h1 {
+            font-family: "Open Sans";
+            font-size: 24px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 26.4px;
+        }
 
-    p {
-        font-family: "Open Sans";
-        font-size: 14px;
-        font-style: normal;
-        font-variant: normal;
-        font-weight: 400;
-        line-height: 20px;
+        h2 {
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 500;
+            line-height: 15.4px;
+        }
+
+        p {
+            font-family: "Open Sans";
+            font-size: 14px;
+            font-style: normal;
+            font-variant: normal;
+            font-weight: 400;
+            line-height: 20px;
+        }
+
+        .text1 {
+            text-align: center;
+            margin-top: 200px;
+            margin-bottom: 200px;
+        }
     }
 </style>
 
@@ -83,21 +187,21 @@
 <div class="main-container">
     <img class="logo-r center-horizontal" src="assets/img/logo-R.png">
     <div class="text1">
-        <h1>Hi there!</h1>
-        <h1>I’m working to have</h1>
-        <h1>ready this page soon</h1>
+        <h1><bold>Hi there!</h1></bold>
+        <h1><bold>I’m working to have</h1></bold>
+        <h1><bold>ready this page soon</h1></bold>
     </div>
     <img class="img-separator center-horizontal" src="assets/img/separador.png">
     <div class="text1">
-        <h1>Meanwhile, you can take</h1>
-        <h1>a look to my work here:</h1>
-        <h1>facebook / instagram / behance</h1>
+        <h1><bold>Meanwhile, you can take</h1></bold>
+        <h1><bold>a look to my work here:</h1></bold>
+        <h1><bold>facebook / instagram / behance</h1></bold>
     </div>
     <img class="img-separator center-horizontal" src="assets/img/separador.png">
     <div class="text1">
-        <h1>Or contact me at:</h1> <br>
-        <h1>hello@rocioegio.com</h1>
-        <h1>+41 76 612 04 26</h1>
+        <h1><bold>Or contact me at:</h1></bold> <br>
+        <h1><bold>hello@rocioegio.com</h1></bold>
+        <h1><bold>+41 76 612 04 26</h1></bold>
     </div>
     <img class="center-horizontal img-card" src="assets/img/see-you-soon.png">
 </div>
