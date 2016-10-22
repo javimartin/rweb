@@ -8,6 +8,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/icons.css">
 
 </head>
 <style type="text/css">
@@ -60,36 +61,56 @@
         color: black;
     }
 
-    .img-separator {
-        width: 60px;
+    .icon-R {
+        font-size: 80px;
+        font-size: 12vw;
+    }
+
+    .icon-separador {
+        font-size: 10px;
+        font-size: 6vw;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-size: 2vw;
+    }
+
+    h2 {
+        font-size: 14px;
+        font-size: 2vw;
+    }
+
+    p {
+        font-size: 10px;
+        font-size: 2vmin;
     }
 
     /* Extra small devices (phones, up to 480px) */
     @media screen and (max-width: 767px) {
-        h1 {
-            font-size: 14px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 12.4px;
-        }
+        /* h1 {
+             font-size: 14px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 500;
+             line-height: 12.4px;
+         }
 
-        h2 {
-            font-size: 10px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 5.4px;
-        }
+         h2 {
+             font-size: 10px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 500;
+             line-height: 5.4px;
+         }
 
-        p {
-            font-size: 10px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 400;
-            line-height: 10px;
-        }
-
+         p {
+             font-size: 10px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 400;
+             line-height: 10px;
+         }*/
         .text1 {
             text-align: center;
             margin-top: 50px;
@@ -98,43 +119,39 @@
 
         .img-card {
             width: 310px;
-        }
-
-        .img-separator {
-            width: 50px;
         }
 
         .logo-r {
             width: 50px;
         }
+
     }
 
     /* Small devices (tablets, 768px and up) */
     @media (min-width: 768px) and (max-width: 991px) {
-        h1 {
-            font-size: 20px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 12px;
-        }
+        /*  h1 {
+              font-size: 20px;
+              font-style: normal;
+              font-variant: normal;
+              font-weight: 500;
+              line-height: 12px;
+          }
 
-        h2 {
-            font-size: 14px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 8px;
-        }
+          h2 {
+              font-size: 14px;
+              font-style: normal;
+              font-variant: normal;
+              font-weight: 500;
+              line-height: 8px;
+          }
 
-        p {
-            font-size: 10px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 400;
-            line-height: 12px;
-        }
-
+          p {
+              font-size: 10px;
+              font-style: normal;
+              font-variant: normal;
+              font-weight: 400;
+              line-height: 12px;
+          }*/
         .text1 {
             text-align: center;
             margin-top: 50px;
@@ -142,36 +159,36 @@
         }
 
         .img-card {
-            width: 310px;
+            width: 400px;
         }
+
     }
 
     /* tablets/desktops and up ----------- */
     @media screen and  (min-width: 992px) {
-        h1 {
-            font-size: 24px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 12px;
-        }
+        /* h1 {
+             font-size: 24px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 500;
+             line-height: 12px;
+         }
 
-        h2 {
-            font-size: 18px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 500;
-            line-height: 8px;
-        }
+         h2 {
+             font-size: 18px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 500;
+             line-height: 8px;
+         }
 
-        p {
-            font-size: 14px;
-            font-style: normal;
-            font-variant: normal;
-            font-weight: 400;
-            line-height: 12px;
-        }
-
+         p {
+             font-size: 14px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 400;
+             line-height: 12px;
+         }*/
         .text1 {
             text-align: center;
             margin-top: 150px;
@@ -180,7 +197,7 @@
         }
 
         .img-card {
-            width: 500px;
+            width: 600px;
         }
     }
 
@@ -188,7 +205,8 @@
 
 <body>
 <div class="main-container">
-    <img class="logo-r center-horizontal" src="assets/img/logo-R.png">
+    <div class="icon icon-R text-center"></div>
+
     <div class="text1">
         <h1>
             <bold>Hi there!</bold>
@@ -200,7 +218,7 @@
             <bold>this page ready soon</bold>
         </h1>
     </div>
-    <img class="img-separator center-horizontal" src="assets/img/separador.png">
+    <div class="icon icon-separador text-center"></div>
     <div class="text1">
         <h1>
             <bold>Meanwhile, you can take</bold>
@@ -224,7 +242,8 @@
             <bold><a href="mailto:hello@rocioegio.com">hello@rocioegio.com</a></bold>
         </h1>
         <h1>
-            <bold>+41 76 612 04 26</bold>
+            <bold><a href="tel:+41766120426">+41 76 612 04 26</a></bold>
+
         </h1>
     </div>
     <img class="center-horizontal img-card" src="assets/img/see-you-soon.png">

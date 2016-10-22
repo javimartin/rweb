@@ -1,89 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/icons.css">
+
 </head>
-
-<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-
 <style type="text/css">
-  body {
-    font-family: "Open Sans";
-  }
+    * {
+        font-family: 'Montserrat', sans-serif;
+    }
 
-  .main-container {
-    padding: 10px;
-  }
+    .main-container {
+        padding: 10px;
+    }
 
-  .centered {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-  }
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -50px;
+        margin-left: -50px;
+    }
 
-  .title {
-    padding-top: 5px;
-  }
+    .center-horizontal {
+        margin: 0 auto;
+        display: block;
+    }
 
-  .image-profile {
-    float: left;
-    padding: 20px;
-    padding
+    .logo-r {
+        padding-top: 40px;
+    }
 
-    display: inline-block;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
-  }
+    .img-card {
+        padding-top: 30px;
+    }
 
-  h1 {
-  font-family: "Open Sans";
-  font-size: 24px;
-  font-style: normal;
-  font-variant: normal;
-  font-weight: 500;
-  line-height: 26.4px;
-  }
-  h2 {
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 500;
-    line-height: 15.4px;
-  }
-  p {
-    font-family: "Open Sans";
-    font-size: 14px;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: 400;
-    line-height: 20px;
-  }
+    a:link {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:visited {
+        text-decoration: none;
+        color: black;
+    }
+
+    a:hover {
+        text-decoration: none;
+        color: #f19ea2;
+    }
+
+    a:active {
+        text-decoration: none;
+        color: black;
+    }
+
+    .icon-R {
+        font-size: 80px;
+        font-size: 12vw;
+    }
+
+    .icon-separador {
+        font-size: 10px;
+        font-size: 6vw;
+    }
+
+    h1 {
+        font-size: 20px;
+        font-size: 2vw;
+    }
+
+    h2 {
+        font-size: 14px;
+        font-size: 2vw;
+    }
+
+    p {
+        font-size: 10px;
+        font-size: 2vmin;
+    }
+
+    /* Extra small devices (phones, up to 480px) */
+    @media screen and (max-width: 767px) {
+        /* h1 {
+             font-size: 14px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 500;
+             line-height: 12.4px;
+         }
+
+         h2 {
+             font-size: 10px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 500;
+             line-height: 5.4px;
+         }
+
+         p {
+             font-size: 10px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 400;
+             line-height: 10px;
+         }*/
+        .text1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .img-card {
+            width: 310px;
+        }
+
+        .logo-r {
+            width: 50px;
+        }
+
+    }
+
+    /* Small devices (tablets, 768px and up) */
+    @media (min-width: 768px) and (max-width: 991px) {
+        /*  h1 {
+              font-size: 20px;
+              font-style: normal;
+              font-variant: normal;
+              font-weight: 500;
+              line-height: 12px;
+          }
+
+          h2 {
+              font-size: 14px;
+              font-style: normal;
+              font-variant: normal;
+              font-weight: 500;
+              line-height: 8px;
+          }
+
+          p {
+              font-size: 10px;
+              font-style: normal;
+              font-variant: normal;
+              font-weight: 400;
+              line-height: 12px;
+          }*/
+        .text1 {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .img-card {
+            width: 400px;
+        }
+
+    }
+
+    /* tablets/desktops and up ----------- */
+    @media screen and  (min-width: 992px) {
+        /* h1 {
+             font-size: 24px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 500;
+             line-height: 12px;
+         }
+
+         h2 {
+             font-size: 18px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 500;
+             line-height: 8px;
+         }
+
+         p {
+             font-size: 14px;
+             font-style: normal;
+             font-variant: normal;
+             font-weight: 400;
+             line-height: 12px;
+         }*/
+        .text1 {
+            text-align: center;
+            margin-top: 150px;
+            margin-bottom: 150px;
+
+        }
+
+        .img-card {
+            width: 600px;
+        }
+    }
+
 </style>
 
 <body>
-  <div class="main-container">
-    <img class="image-profile" src="assets/img/rocio-profile.jpg">
-    <div class="title">
-      <h1>Rocío Egío</h1>
-      <h2>Architect | Graphic Designer | Lausanne, Switzerland</h2>
-        <h2><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:hello@rocioegio.com">hello@rocioegio.com</a></h2>
-    </div>
-  </div>
+<div class="main-container">
+    <div class="icon icon-R text-center"></div>
 
-  <h1 class="centered">Web in progress...</h1>
+    <div class="text1">
+        <h1>
+            <bold>Hi there!</bold>
+        </h1>
+        <h1>
+            <bold>I’m working to have</bold>
+        </h1>
+        <h1>
+            <bold>this page ready soon</bold>
+        </h1>
+    </div>
+    <div class="icon icon-separador text-center"></div>
+    <div class="text1">
+        <h1>
+            <bold>Meanwhile, you can take</bold>
+        </h1>
+        <h1>
+            <bold>a look to my work here:</bold>
+        </h1>
+        <h1>
+            <bold><a target="_blank" href="https://www.facebook.com/rocioegio">facebook</a> / <a
+                    target="_blank" href="https://www.instagram.com/rocioegio/">instagram</a> / <a
+                    target="_blank" href="https://www.behance.net/rocioegio14f0">behance</a></bold>
+        </h1>
+    </div>
+    <img class="img-separator center-horizontal" src="assets/img/separador.png">
+    <div class="text1">
+        <h1>
+            <bold>Or contact me at:</bold>
+        </h1>
+        <br>
+        <h1>
+            <bold><a href="mailto:hello@rocioegio.com">hello@rocioegio.com</a></bold>
+        </h1>
+        <h1>
+            <bold><a href="tel:+41766120426">+41 76 612 04 26</a></bold>
+
+        </h1>
+    </div>
+    <img class="center-horizontal img-card" src="assets/img/see-you-soon.png">
+</div>
 </body>
 </html>
