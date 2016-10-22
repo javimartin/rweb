@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/icons.css">
 
@@ -18,6 +18,15 @@
 
     .main-container {
         padding: 10px;
+    }
+
+    .logo-r {
+        margin-top: 40px;
+    }
+
+    .bold-700 {
+        font-weight: 700;
+        font-style: normal;
     }
 
     .centered {
@@ -33,12 +42,12 @@
         display: block;
     }
 
-    .logo-r {
-        padding-top: 40px;
-    }
-
     .img-card {
         padding-top: 30px;
+    }
+
+    .img-card-container {
+        margin-bottom: 50px;
     }
 
     a:link {
@@ -74,6 +83,7 @@
     h1 {
         font-size: 20px;
         font-size: 2vw;
+        line-height: 1.5em;
     }
 
     h2 {
@@ -120,11 +130,6 @@
         .img-card {
             width: 310px;
         }
-
-        .logo-r {
-            width: 50px;
-        }
-
     }
 
     /* Small devices (tablets, 768px and up) */
@@ -205,48 +210,47 @@
 
 <body>
 <div class="main-container">
-    <div class="icon icon-R text-center"></div>
+    <div class="logo-r">
+        <div class="icon icon-R text-center"></div>
+    </div>
 
     <div class="text1">
         <h1>
-            <bold>Hi there!</bold>
-        </h1>
-        <h1>
-            <bold>I’m working to have</bold>
-        </h1>
-        <h1>
-            <bold>this page ready soon</bold>
+            <span class="bold-700">Hi there!</span>
+            <br>
+            <span class="bold-700">I’m working to have</span>
+            <br>
+            <span class="bold-700">this page ready soon</span>
+            <br>
         </h1>
     </div>
     <div class="icon icon-separador text-center"></div>
     <div class="text1">
         <h1>
-            <bold>Meanwhile, you can take</bold>
-        </h1>
-        <h1>
-            <bold>a look to my work here:</bold>
-        </h1>
-        <h1>
-            <bold><a target="_blank" href="https://www.facebook.com/rocioegio">facebook</a> / <a
+            <span class="bold-700">Meanwhile, you can take</span>
+            <br>
+            <span class="bold-700">a look to my work here:</span>
+            <br>
+            <span class="bold-700"><a target="_blank" href="https://www.facebook.com/rocioegio">facebook</a> / <a
                     target="_blank" href="https://www.instagram.com/rocioegio/">instagram</a> / <a
-                    target="_blank" href="https://www.behance.net/rocioegio14f0">behance</a></bold>
+                    target="_blank" href="https://www.behance.net/rocioegio14f0">behance</a></span>
         </h1>
     </div>
-    <img class="img-separator center-horizontal" src="assets/img/separador.png">
+    <div class="icon icon-separador text-center"></div>
     <div class="text1">
         <h1>
-            <bold>Or contact me at:</bold>
-        </h1>
-        <br>
-        <h1>
-            <bold><a href="mailto:hello@rocioegio.com">hello@rocioegio.com</a></bold>
-        </h1>
-        <h1>
-            <bold><a href="tel:+41766120426">+41 76 612 04 26</a></bold>
+            <span class="bold-700">Or contact me at:</span>
+            <br>
+            <br>
+            <span class="bold-700"><a href="mailto:hello@rocioegio.com">hello@rocioegio.com</a></span>
+            <br>
+            <span class="bold-700"><a href="tel:+41766120426">+41 76 612 04 26</a></span>
 
         </h1>
     </div>
-    <img class="center-horizontal img-card" src="assets/img/see-you-soon.png">
+    <div class="img-card-container">
+        <img class="center-horizontal img-card" src="assets/img/see-you-soon.png">
+    </div>
 </div>
 </body>
 </html>
