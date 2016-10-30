@@ -4,11 +4,57 @@
   "description": "rweb",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+
+    "postinstall": "bower install && npm run build",
+
+    "prestart": "npm install",
+    "buildc": "ncp app/ dist/",
+    "clean": "rm -rf dist",
+
+    "watch:server"	: "watch -p /app/bower_components/ 'npm run build' app/",
+    "watch:client"	: "live-reload --port 9091 dist/",
+    "watch" 		: "npm run watch:server & npm run watch:client & npm run dev",
+
+    "server": "http-server -a localhost -p 5000 -c-1 ./dist",
+    "livereload": "live-reload --port 9000 dist/",
+
+    "copy:bower": "copyfiles 'bower_components/**/*.min.{css,js}' dist/",
+    "copy:assets": "copyfiles -u 1 'app/assets/**/*' dist/",
+
+    "copy:index": "copyfiles -u 2 'app/scripts/index.html' dist/",
+    "copy:index2": "copyfiles -u 2 'app/scripts/index2.html' dist/",
+    "build:src": "copyfiles -u 1 'app/scripts/**/*' dist/ && rm dist/scripts/index.html && npm run copy:index && npm run copy:index2",
+    "watch:src": "watch 'npm run build:src' app/scripts/",
+
+    "build:css": "copyfiles -u 1 'app/styles/**/*.css' dist/",
+    "watch:css": "watch 'npm run build:css' app/styles/",
+
+    "build": "npm run clean && npm run copy:bower && npm run copy:assets && npm run build:src && npm run build:css",
+    "dev": "parallelshell 'npm run watch:src' 'npm run watch:css' 'npm run server' 'npm run livereload'",
+
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js --single-run"
   },
   "dependencies": {
     "body-parser": "^1.13.3",
     "express": "^4.13.3"
+  },
+  "devDependencies": {
+    "bower": "^1.7.7",
+    "http-server": "^0.9.0",
+    "jasmine-core": "^2.4.1",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.3",
+    "karma-firefox-launcher": "^0.1.7",
+    "karma-jasmine": "^0.3.8",
+    "karma-junit-reporter": "^0.4.1",
+    "protractor": "^4.0.9",
+    "live-reload": "latest",
+    "ncp": "latest",
+    "watch": "latest",
+    "parallelshell": "latest",
+    "copyfiles": "latest"
   }
 }

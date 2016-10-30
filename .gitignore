@@ -1,2 +1,9 @@
 node_modules/
 .idea/
+logs/*
+!.gitkeep
+node_modules/
+bower_components/
+dist2/
+tmp
+.DS_Store

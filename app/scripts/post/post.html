@@ -1,0 +1,27 @@
+<div class="row">
+    <div class="col-xs-12">
+        <h1 class="text-center">{{::postCtrl.post.title}}</h1>
+        <br>
+            <p>{{::postCtrl.post.text}}</p>
+        <br>
+        <!--  <p ng-bind-html="postCtrl.post.text"></p>-->
+
+     </div>
+ </div>
+
+ <div class="row">
+     <div ng-repeat="image in ::postCtrl.post.images" class="col-xs-12 thumb">
+         <a class="thumbnail" href="#">
+             <img class="img-responsive" ng-src="{{image.url}}" alt="">
+         </a>
+     </div>
+ </div>
+ <!--
+ <div class="row">
+     <div class="col-xs-6"><a class="thumbnail" href="#">
+         <img class="img-responsive" src="{{::postCtrl.postimages[1].url}}" alt="">
+     </a></div>
+     <div class="col-xs-6"><a class="thumbnail" href="#">
+         <img class="img-responsive" src="{{::postCtrl.postimages[2].url}}" alt="">
+     </a></div>
+ </div>&lt;!&ndash;/row&ndash;&gt;-->
