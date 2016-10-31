@@ -132,7 +132,7 @@ a.project-thumbnail:hover {
 
 }
 
-li.active, li.active {
+li.active, li.active a {
     color: #f19ea2;
 }
 
