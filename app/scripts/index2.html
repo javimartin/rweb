@@ -36,14 +36,14 @@
 <div class="container" ng-controller="AppController as appCtrl">
     <div class="header navbar navbar-fixed-top">
         <div class="logo-r">
-            <div class="icon icon-R text-center"><a href="#!/"></a></div>
+            <a href="#!/"><div class="icon icon-R text-center"></div></a>
         </div>
 
         <div class="menu-nav">
 
             <ul id="menu-main" class="list-inline text-center">
                 <li ng-class="{active: appCtrl.isActive('/')}" class="text-center">
-                    <a href="#!/">work</a>
+                    <a href="#!/">projects</a>
                 </li>
                 <li ng-class="{active: appCtrl.isActive('/about')}" class="text-center">
                     <a href="#!/about">about</a>
@@ -78,6 +78,7 @@
 <script src="bower_components/angular/angular.min.js"></script>
 <script src="bower_components/angular-route/angular-route.min.js"></script>
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 <script src="scripts/app.js"></script>
 <script src="scripts/home/home.js"></script>

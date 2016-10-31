@@ -7,7 +7,7 @@ if (startchange.length) {
     $(document).scroll(function () {
         scroll_start = $(this).scrollTop();
         if (scroll_start > offset.top) {
-            $(".logo-r").css('opacity', '0.1');
+            $(".logo-r").css('opacity', '0.3');
         } else {
             $('.logo-r').css('opacity', '1');
         }
@@ -17,6 +17,7 @@ if (startchange.length) {
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
+    'ngSanitize',
     'ngAnimate',
     'ngRoute',
     'myApp.home',

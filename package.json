@@ -13,10 +13,8 @@
     "clean": "rm -rf dist",
 
     "watch:server"	: "watch -p /app/bower_components/ 'npm run build' app/",
-    "watch:client"	: "live-reload --port 9091 dist/",
-    "watch" 		: "npm run watch:server & npm run watch:client & npm run dev",
 
-    "server": "http-server -a localhost -p 5000 -c-1 ./dist",
+    "server": "http-server -a localhost -p 7000 -c-1 ./dist",
     "livereload": "live-reload --port 9000 dist/",
 
     "copy:bower": "copyfiles 'bower_components/**/*.min.{css,js}' dist/",
@@ -31,7 +29,7 @@
     "watch:css": "watch 'npm run build:css' app/styles/",
 
     "build": "npm run clean && npm run copy:bower && npm run copy:assets && npm run build:src && npm run build:css",
-    "dev": "parallelshell 'npm run watch:src' 'npm run watch:css' 'npm run server' 'npm run livereload'",
+    "dev": "parallelshell 'npm run watch:src' 'npm run watch:css' 'npm run server'",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",

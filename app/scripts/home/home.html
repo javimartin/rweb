@@ -1,8 +1,10 @@
 <div class="row">
     <div ng-repeat="project in homeCtrl.projects" class="col-md-4 col-sm-6 col-xs-12 thumb col-padding">
-        <a class="thumbnail" href="#!/post/{{::project.name}}">
-            <img class="img-responsive" ng-src="{{::project.thumbnail}}" alt="{{::project.title}}">
-            <div class="caption"><span>{{::project.title}}</span></div>
+        <a class="thumbnail project-thumbnail" href="#!/post/{{::project.name}}">
+            <img class="project-img"  ng-src="{{::project.thumbnail}}" alt="{{::project.title}}"/>
+            <p class="project-img-caption">
+                <span>{{::project.title}}</span>
+            </p>
         </a>
     </div>
 </div><!--/row-->

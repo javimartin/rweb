@@ -1,27 +1,23 @@
 <div class="row">
     <div class="col-xs-12">
-        <h1 class="text-center">{{::postCtrl.post.title}}</h1>
+        <h1 class="text-center post-title">{{::postCtrl.post.title}}</h1>
         <br>
-            <p>{{::postCtrl.post.text}}</p>
+        <div ng-bind-html="::postCtrl.post.text"></div>
         <br>
-        <!--  <p ng-bind-html="postCtrl.post.text"></p>-->
+    </div>
+</div>
 
-     </div>
- </div>
-
- <div class="row">
-     <div ng-repeat="image in ::postCtrl.post.images" class="col-xs-12 thumb">
-         <a class="thumbnail" href="#">
-             <img class="img-responsive" ng-src="{{image.url}}" alt="">
-         </a>
-     </div>
- </div>
- <!--
- <div class="row">
-     <div class="col-xs-6"><a class="thumbnail" href="#">
-         <img class="img-responsive" src="{{::postCtrl.postimages[1].url}}" alt="">
-     </a></div>
-     <div class="col-xs-6"><a class="thumbnail" href="#">
-         <img class="img-responsive" src="{{::postCtrl.postimages[2].url}}" alt="">
-     </a></div>
- </div>&lt;!&ndash;/row&ndash;&gt;-->
+<div class="row">
+    <div ng-repeat="image in ::postCtrl.post.images" class="col-xs-12 thumb pb-15">
+        <img class="img-responsive" ng-src="{{image.url}}" alt="">
+    </div>
+</div>
+<!--
+<div class="row">
+    <div class="col-xs-6"><a class="thumbnail" href="#">
+        <img class="img-responsive" src="{{::postCtrl.postimages[1].url}}" alt="">
+    </a></div>
+    <div class="col-xs-6"><a class="thumbnail" href="#">
+        <img class="img-responsive" src="{{::postCtrl.postimages[2].url}}" alt="">
+    </a></div>
+</div>&lt;!&ndash;/row&ndash;&gt;-->

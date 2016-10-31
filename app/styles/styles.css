@@ -5,6 +5,22 @@
 
 /* -------------- HELPERS  -------------- */
 
+.pt-15 {
+    padding-top: 15px;
+}
+
+.pb-15 {
+    padding-bottom: 15px;
+}
+
+.pl-15 {
+    padding-left: 15px;
+}
+
+.pr-15 {
+    padding-right: 15px;
+}
+
 .pt-60 {
     padding-top: 60px;
 }
@@ -34,6 +50,7 @@ body {
     padding: 0;
     border: none;
     margin-bottom: 15px;
+    border-radius: 0;
 }
 
 .animate.ng-enter {
@@ -46,50 +63,37 @@ body {
     opacity: 1;
 }
 
-.caption {
-    vertical-align: middle;
-    padding: 0;
-    position: absolute;
-    width: 97%;
-    height: 95%;
-    box-sizing: border-box;
-    border: 0;
-    top: 0;
-    left: 5px;
+.thumb a:hover .project-img-caption {
+    visibility: visible;
+}
+
+a.project-thumbnail:hover {
     background-color: #fed344;
+}
+
+.project-img:hover, .thumbnail:hover img {
+    visibility: hidden;
+}
+
+.thumb a:hover .project-img-caption span {
+    visibility: visible;
+}
+
+.project-img-caption {
+    position: absolute;
+    top: 45%;
+    left: 0;
     text-align: center;
-    opacity: 0;
-    -webkit-transition: all 0.3s;
-    -moz-transition: all 0.3s;
-    -ms-transition: all 0.3s;
-    -o-transition: all 0.3s;
-    transition: all 0.3s;
+    width: 100%;
+    visibility: hidden;
 }
 
-.caption span {
-    display: inline-block;
-    opacity: 0;
-    vertical-align:middle;
-    color: black;
+.project-img-caption span {
+    font-weight: 300;
     text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.caption:before {
-    content:" ";
-    height:100%;
-    width:0;
-    display:inline-block;
-    vertical-align:middle;
-}
-
-
-.thumb a:hover .caption  {
-    opacity: 1;
-}
-
-.thumb a:hover .caption span {
-    opacity: 1;
+    letter-spacing: 5px;
+    pointer-events: none;
+    color: black;
 }
 
 /* ------------------------------------------------ */
@@ -206,12 +210,20 @@ h2 {
 
 p, a {
     font-size: 10px;
-    font-size: 2vmin;
+    font-size: 2.1vmin;
 }
 
 .img-card {
     width: 45vw;
 }
+
+
+
+.post-title {
+    letter-spacing: 2px;
+}
+
+
 
 /* Extra small devices (phones, up to 480px) */
 @media screen and (max-width: 767px) {
