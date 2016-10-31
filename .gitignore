@@ -4,6 +4,6 @@ logs/*
 !.gitkeep
 node_modules/
 bower_components/
-dist2/
+dist/
 tmp
 .DS_Store
