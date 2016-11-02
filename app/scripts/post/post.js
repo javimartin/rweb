@@ -10,7 +10,7 @@ angular.module('myApp.post', ['ngRoute'])
         });
     }])
 
-    .controller('PostController', ['$routeParams', function ($routeParams) {
+    .controller('PostController', ['$routeParams', '$location', '$anchorScroll', function ($routeParams, $location, $anchorScroll) {
         var vm = this;
 
         var posts = [
@@ -39,9 +39,36 @@ angular.module('myApp.post', ['ngRoute'])
         ];
 
         vm.init = function () {
-            vm.post = _.find(posts, function (post) {
-                return $routeParams.post === post.name;
+            /*vm.post = _.find(posts, function (post) {
+             return $routeParams.post === post.name;
+             });*/
+
+            vm.index = _.findIndex(posts, function (post) {
+                return $routeParams.post === post.name
             });
+
+            // FIXME
+            vm.post = posts[vm.index];
+
+            // FIXME
+            vm.hasNext = (vm.index < posts.length);
+            vm.hasPrev = (vm.index > 0);
+        };
+
+        vm.prev = function () {
+            // FIXME
+            var index = vm.index - 1;
+            var path = "/post/" + posts[index].name;
+            $anchorScroll();
+            $location.path(path);
+        };
+
+        vm.next = function () {
+            // FIXME
+            var index = vm.index + 1;
+            var path = "/post/" + posts[index].name;
+            $anchorScroll();
+            $location.path(path);
         };
 
         vm.init();

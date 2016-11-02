@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/styles.css">
 
+    <script src="//localhost:9091"></script>
+
 </head>
 
 
@@ -35,21 +37,22 @@
 
 <div class="container" ng-controller="AppController as appCtrl">
     <div class="header navbar navbar-fixed-top">
-        <div class="logo-r">
-            <a href="#!/"><div class="icon icon-R text-center"></div></a>
-        </div>
-
+        <ul class="logo-r list-inline text-center">
+            <li class="text-center">
+                <a href="#!/" ng-click="appCtrl.go('/')"><span class="icon icon-R"></span></a>
+            </li>
+        </ul>
         <div class="menu-nav">
 
             <ul id="menu-main" class="list-inline text-center">
                 <li ng-class="{active: appCtrl.isActive('/')}" class="text-center">
-                    <a href="#!/">projects</a>
+                    <a href="#!/" ng-click="appCtrl.go('/')">projects</a>
                 </li>
                 <li ng-class="{active: appCtrl.isActive('/about')}" class="text-center">
-                    <a href="#!/about">about</a>
+                    <a href="#!/about" ng-click="appCtrl.go('/about')">about</a>
                 </li>
                 <li ng-class="{active: appCtrl.isActive('/contact')}" class="text-center">
-                    <a href="#!/contact">contact</a>
+                    <a href="#!/contact" ng-click="appCtrl.go('/contact')">contact</a>
                 </li>
             </ul>
         </div>
@@ -58,7 +61,7 @@
 
 <div class="container main-content">
 
-    <div class="animate ng-view" autoscroll="true"></div>
+    <div class="anim ng-view" autoscroll="true"></div>
 
     <footer>
         <div class="icon icon-separador text-center"></div>

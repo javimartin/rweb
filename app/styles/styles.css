@@ -53,14 +53,13 @@ body {
     border-radius: 0;
 }
 
-.animate.ng-enter {
+.anim.ng-enter {
     -webkit-transition: all 1000ms cubic-bezier(0.64, 0.05, 0.35, 1);
-    -webkit-transition-timing-function: all 1000ms cubic-bezier(0.64, 0.05, 0.35, 1);
     transition: all 1000ms cubic-bezier(0.64, 0.05, 0.35, 1);
     opacity: 0;
 }
 
-.animate.ng-enter.ng-enter-active, .animate.ng-leave {
+.anim.ng-enter.ng-enter-active, .animate.ng-leave {
     opacity: 1;
 }
 
@@ -91,8 +90,7 @@ a.project-thumbnail:hover {
 
 .project-img-caption span {
     font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     pointer-events: none;
     color: black;
 }
@@ -121,6 +119,7 @@ a.project-thumbnail:hover {
 
 .menu-nav {
     padding: 15px 0 30px 0px;
+    letter-spacing: 3px;
 }
 
 .menu-nav ul li:nth-child(2) { /* second item */
@@ -168,7 +167,7 @@ li.active, li.active a {
     margin-bottom: 50px;
 }
 
-a:link {
+a, a:link {
     text-decoration: none;
     color: black;
 }
@@ -218,13 +217,13 @@ p, a {
     width: 45vw;
 }
 
-
-
 .post-title {
     letter-spacing: 2px;
 }
 
-
+.btn-nxt {
+    text-align: right;
+}
 
 /* Extra small devices (phones, up to 480px) */
 @media screen and (max-width: 767px) {

@@ -28,11 +28,17 @@ angular.module('myApp', [
     $locationProvider.hashPrefix('!');
     $routeProvider.otherwise({redirectTo: '/'});
 
-}]).controller('AppController', ['$scope', '$location', function ($scope, $location) {
+}]).controller('AppController', ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
     var vm = this;
 
     vm.isActive = function (viewLocation) {
         var active = (viewLocation === $location.path());
         return active;
     };
+
+    vm.go = function (path) {
+        $anchorScroll();
+       // $location.path(path);
+    };
+
 }]);
