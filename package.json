@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "clean:bower": "rm -rf bower_componets",
-    "postinstall": "npm run clean:bower && bower cache clean && bower install && npm run build",
+    "clean:bower": "rm -rf bower_components",
+    "postinstall": "npm run clean:bower && bower install && npm run build",
     "prestart": "npm install",
     "buildc": "ncp app/ dist/",
     "clean:dist": "rm -rf dist",
