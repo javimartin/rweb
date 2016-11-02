@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bower install && npm run build",
+    "postinstall": "clean:bower && bower install && npm run build",
     "prestart": "npm install",
     "buildc": "ncp app/ dist/",
-    "clean": "rm -rf dist",
+    "clean:dist": "rm -rf dist",
+    "clean:bower": "rm -rf bower:componets",
 
     "server": "http-server -a localhost -p 7000 -c-1 ./dist & open http://localhost:7000",
 
@@ -26,7 +27,7 @@
     "build:css": "copyfiles -u 1 'app/styles/**/*.css' dist/",
     "watch:css": "watch 'npm run build:css' app/styles/",
 
-    "build": "npm run clean && npm run copy:bower && npm run copy:assets && npm run build:src && npm run build:css",
+    "build": "npm run clean:dist && npm run copy:bower && npm run copy:assets && npm run build:src && npm run build:css",
 
     "dev": "concurrently --kill-others \"npm run watch:src\" \"npm run watch:css\" \"npm run server\" \"npm run livereload\"",
 
