@@ -29,51 +29,46 @@
 
 
 <body>
+<div class="content" ng-controller="AppController as appCtrl">
+    <!--[if lt IE 7]>
+    <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+        your browser</a> to improve your experience.</p>
+    <![endif]-->
 
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+    <nav class="navbar navbar-fixed-top">
+        <div class="container-fluid">
 
-<div class="container nav-container" ng-controller="AppController as appCtrl">
-    <div class="header navbar navbar-fixed-top">
-        <ul class="logo-r list-inline text-center">
-            <li class="text-center">
-                <a href="#!/" ng-click="appCtrl.go('/')"><span class="icon icon-R"></span></a>
-            </li>
-        </ul>
-        <div class="menu-nav">
-
-            <ul id="menu-main" class="list-inline text-center">
-                <li ng-class="{active: appCtrl.isActive('/')}" class="text-center">
+            <a class="" href="#!/" ng-click="appCtrl.go('/')">
+                <span class="icon icon-R"></span>
+            </a>
+            <ul class="nav navbar-nav navbar-right navigation">
+                <li ng-class="{active: appCtrl.isActive('/')}">
                     <a href="#!/" ng-click="appCtrl.go('/')">projects</a>
                 </li>
-                <li ng-class="{active: appCtrl.isActive('/about')}" class="text-center">
+                <li ng-class="{active: appCtrl.isActive('/about')}">
                     <a href="#!/about" ng-click="appCtrl.go('/about')">about</a>
                 </li>
-                <li ng-class="{active: appCtrl.isActive('/contact')}" class="text-center">
+                <li ng-class="{active: appCtrl.isActive('/contact')}">
                     <a href="#!/contact" ng-click="appCtrl.go('/contact')">contact</a>
                 </li>
             </ul>
         </div>
+    </nav>
+
+    <div class="container-fluid main-content">
+
+        <div class="animate ng-view" autoscroll="true"></div>
+
+        <footer>
+            <p class="text-right navigation">
+                <a href="mailto:hello@rocioegio.com">mail</a> <a
+                    href="https://www.facebook.com/rocioegio" target="_blank">facebook</a> <a
+                    href="https://www.instagram.com/rocioegio">instagram</a>
+                <a href="https://www.behance.net/rocioegio14f0" target="_blank">behance</a>
+                <a href="https://www.linkedin.com/rocioegio" target="_blank">linkedin</a>
+            </p>
+        </footer>
     </div>
-</div><!-- /.container -->
-
-<div class="container-fluid main-content">
-
-    <div class="animate ng-view" autoscroll="true"></div>
-
-    <footer>
-        <div class="icon icon-separador text-center"></div>
-        <p class="text-center">
-            <a href="mailto:hello@rocioegio.com">mail</a> <a
-                href="https://www.facebook.com/rocioegio" target="_blank">facebook</a> <a
-                href="https://www.instagram.com/rocioegio">instagram</a>
-            <a href="https://www.behance.net/rocioegio14f0" target="_blank">behance</a>
-            <a href="https://www.linkedin.com/rocioegio" target="_blank">linkedin</a>
-        </p>
-    </footer>
-
 </div><!--/.container-->
 
 <script src="bower_components/jquery/dist/jquery.min.js"></script>

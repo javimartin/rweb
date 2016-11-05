@@ -21,7 +21,7 @@ angular.module('myApp.home', ['ngRoute'])
             "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab alias, consequuntur corporis facilis fuga magnam necessitatibus praesentium provident suscipit veniam. Dignissimos distinctio molestias neque nobis quidem quod sunt totam ullam. <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam cum dolor doloremque eaque eligendi expedita fugit inventore ipsum, neque, nihil non quam ratione repellendus tenetur ullam. Hic ipsam optio quas!"
         };
 
-        for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 9; i++) {
             var postLoop = angular.copy(post);
             if (i == 0) {
                 postLoop.title = "September Vacations"

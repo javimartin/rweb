@@ -7,9 +7,9 @@ if (startchange.length) {
     $(document).scroll(function () {
         scroll_start = $(this).scrollTop();
         if (scroll_start > offset.top) {
-            $(".logo-r").css('opacity', '0.3');
+            $(".navbar").css('opacity', '0.5');
         } else {
-            $('.logo-r').css('opacity', '1');
+            $('.navbar').css('opacity', '1');
         }
     });
 }
@@ -38,7 +38,7 @@ angular.module('myApp', [
 
     vm.go = function (path) {
         $anchorScroll();
-       // $location.path(path);
+        // $location.path(path);
     };
 
 }]);

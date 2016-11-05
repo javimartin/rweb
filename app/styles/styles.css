@@ -68,7 +68,7 @@ body {
 }
 
 a.project-thumbnail:hover {
-    background-color: white;
+    background-color: #fad3d1;
 }
 
 .project-img:hover, .thumbnail:hover img {
@@ -89,7 +89,6 @@ a.project-thumbnail:hover {
 }
 
 .project-img-caption span {
-    font-weight: bold;
     pointer-events: none;
     color: black;
 }
@@ -97,11 +96,19 @@ a.project-thumbnail:hover {
 /* ------------------------------------------------ */
 
 /* -------------- MENU nav bar -------------- */
-.navbar .navbar-nav {
 
+.navbar {
+    padding-top: 40px;
+}
+
+.navbar .navbar-nav {
     display: inline-block;
     float: none;
     vertical-align: top;
+}
+
+.navbar-brand {
+    padding: 0;
 }
 
 .navbar .navbar-collapse {
@@ -112,26 +119,45 @@ a.project-thumbnail:hover {
     padding: 10px;
 }
 
-.logo-r {
-    margin-top: 40px;
-}
-
 .menu-nav {
     padding: 15px 0 30px 0px;
 }
 
-.menu-nav ul li:nth-child(2) { /* second item */
-    padding-left: 45px;
-}
-
-.menu-nav ul li:nth-child(3) { /* third item */
-    padding-left: 45px;
-
+.nav>li>a:focus, .nav>li>a:hover {
+    background-color: transparent;
+    color: #f19ea2;
 }
 
 li.active, li.active a {
     color: #f19ea2;
 }
+
+.navbar-nav>li>a {
+    padding: 0 20px;
+}
+
+ul.nav.navbar-nav {
+    margin-top: 0;
+}
+
+/* override navbar collapsing */
+
+.navbar-collapse.collapse {
+    display: block!important;
+}
+
+.navbar-nav>li, .navbar-nav {
+    float: left !important;
+}
+
+.navbar-nav.navbar-right:last-child {
+    margin-right: -15px !important;
+}
+
+.navbar-right {
+    float: right!important;
+}
+
 
 /* -------------------------------------------- */
 
@@ -182,17 +208,14 @@ a:hover {
 
 a:active {
     text-decoration: none;
-    color: black;
+    color: #f19ea2;
 }
+
+/* --------------------- Font sizes ------------------------ */
 
 .icon-R {
-    font-size: 75px;
-    font-size: 11vw;
-}
-
-.icon-separador {
-    font-size: 10px;
-    font-size: 5vw;
+    font-size: 7em;
+    font-size: 8.5vw;
 }
 
 h1 {
@@ -211,12 +234,26 @@ p, a {
     font-size: 2.1vmin;
 }
 
+.navigation a {
+    font-size: 1.2em;
+    font-size: 1.2vw;
+}
+
+.project-img-caption span {
+    font-size: 1.4em;
+    font-size: 1.4vw;
+}
+
 .img-card {
     width: 45vw;
 }
 
 .btn-nxt {
     text-align: right;
+}
+
+.bg-pink {
+    background-color: #fad3d1;
 }
 
 /* Extra small devices (phones, up to 480px) */
@@ -228,9 +265,12 @@ p, a {
         margin-bottom: 50px;
     }
 
+    .navbar {
+        padding-top: 30px;
+    }
+
     body {
-        padding-top: 10px;
-        margin-top: 150px;
+        padding-top: 110px;
     }
 
     /* -------------- MENU nav bar -------------- */
@@ -263,6 +303,10 @@ p, a {
         padding-left: 15px;
     }
 
+    .navigation a {
+        font-size: 0.8em;
+    }
+
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -274,9 +318,12 @@ p, a {
         margin-bottom: 50px;
     }
 
+    .navbar {
+        padding-top: 40px;
+    }
+
     body {
-        padding-top: 20px;
-        margin-top: 200px;
+        padding-top: 100px;
     }
 
     /* ------------------ footer ------------------ */
@@ -307,23 +354,22 @@ p, a {
 
     }
 
-    .container-fluid {
-        max-width: 1200px;
+    .navbar {
+        padding-top: 40px;
     }
-    /*.container-fluid {
-        margin-left: 100px;
-        margin-right: 100px;
-    }*/
 
     body {
-        padding-top: 70px;
-        margin-top: 250px;
+        padding-top: 290px;
+    }
+
+    .container-fluid {
+        max-width: 1200px;
     }
 
     /* ------------------ footer ------------------ */
     footer {
         padding-top: 60px;
-        margin-bottom: 60px;
+        margin-bottom: 70px;
     }
 
     footer .icon {
@@ -338,7 +384,6 @@ p, a {
 
 }
 
-
 @media screen and  (min-width: 1600px) {
 
     .text1 {
@@ -349,8 +394,7 @@ p, a {
     }
 
     body {
-        padding-top: 140px;
-        margin-top: 600px;
+        padding-top: 500px;
     }
 
     /* ------------------ footer ------------------ */
