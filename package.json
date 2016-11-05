@@ -29,7 +29,7 @@
 
     "build": "npm run clean:dist && npm run copy:bower && npm run copy:assets && npm run build:src && npm run build:css",
 
-    "dev": "concurrently --kill-others \"npm run watch:src\" \"npm run watch:css\" \"npm run server\" \"npm run livereload\"",
+    "dev": "npm run build && concurrently --kill-others \"npm run watch:src\" \"npm run watch:css\" \"npm run server\" \"npm run livereload\"",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
