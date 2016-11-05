@@ -307,15 +307,13 @@ p, a {
 
     }
 
-    /*.container {
-        max-width: 1000px;
-    }*/
     .container-fluid {
+        max-width: 1200px;
+    }
+    /*.container-fluid {
         margin-left: 100px;
         margin-right: 100px;
-        max-width: 1200px;
-
-    }
+    }*/
 
     body {
         padding-top: 70px;
@@ -340,13 +338,8 @@ p, a {
 
 }
 
-/* tablets/desktops and up ----------- */
-@media screen and  (min-width: 2000px) {
 
-    .container-fluid {
-        margin-left: 300px;
-        margin-right: 300px;
-    }
+@media screen and  (min-width: 1600px) {
 
     .text1 {
         text-align: center;
