@@ -38,11 +38,11 @@
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
 
-            <a class="" href="#!/" ng-click="appCtrl.go('/')">
+            <a class="logo-r" href="#!/" ng-click="appCtrl.go('/')">
                 <span class="icon icon-R"></span>
             </a>
             <ul class="nav navbar-nav navbar-right navigation">
-                <li ng-class="{active: appCtrl.isActive('/')}">
+                <li ng-class="{active: (appCtrl.isActive('/') || appCtrl.isActive('/project'))}">
                     <a href="#!/" ng-click="appCtrl.go('/')">projects</a>
                 </li>
                 <li ng-class="{active: appCtrl.isActive('/about')}">
@@ -83,6 +83,6 @@
 <script src="scripts/home/home.js"></script>
 <script src="scripts/about/about.js"></script>
 <script src="scripts/contact/contact.js"></script>
-<script src="scripts/post/post.js"></script>
+<script src="scripts/project/project.js"></script>
 </body>
 </html>

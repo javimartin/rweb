@@ -7,9 +7,9 @@ if (startchange.length) {
     $(document).scroll(function () {
         scroll_start = $(this).scrollTop();
         if (scroll_start > offset.top) {
-            $(".navbar").css('opacity', '0.5');
+            $(".logo-r").css('visibility', 'hidden');
         } else {
-            $('.navbar').css('opacity', '1');
+            $('.logo-r').css('visibility', 'visible');
         }
     });
 }
@@ -32,13 +32,12 @@ angular.module('myApp', [
     var vm = this;
 
     vm.isActive = function (viewLocation) {
-        var active = (viewLocation === $location.path());
-        return active;
+        var locationPath = $location.path();
+        return (viewLocation === locationPath || (locationPath.includes("/project/") && viewLocation.includes("/project/")));
     };
 
     vm.go = function (path) {
         $anchorScroll();
-        // $location.path(path);
     };
 
 }]);

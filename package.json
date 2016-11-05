@@ -15,7 +15,7 @@
 
     "livereload": "live-reload --port 9091 dist/",
 
-    "copy:bower": "copyfiles 'bower_components/**/*.min.{css,js}' dist/",
+    "copy:bower": "copyfiles 'bower_components/**/*.min.{css,js}' dist/ && copyfiles 'bower_components/bootstrap/dist/fonts/**' dist/",
     "copy:assets": "copyfiles -u 1 'app/assets/**/*' dist/",
 
     "copy:index": "copyfiles -u 2 'app/scripts/index.html' dist/",
