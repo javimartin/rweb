@@ -23,17 +23,18 @@ angular.module('myApp', [
     'myApp.home',
     'myApp.about',
     'myApp.contact',
-    'myApp.post'
+    'myApp.project',
+    'myApp.projectsService'
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
     $routeProvider.otherwise({redirectTo: '/'});
 
-}]).controller('AppController', ['$scope', '$location', '$anchorScroll', function ($scope, $location, $anchorScroll) {
+}]).controller('AppController', ['$scope', '$location', '$anchorScroll', '$window', function ($scope, $location, $anchorScroll, $window) {
     var vm = this;
 
     vm.isActive = function (viewLocation) {
         var locationPath = $location.path();
-        return (viewLocation === locationPath || (locationPath.includes("/project/") && viewLocation.includes("/project/")));
+        return (viewLocation === locationPath || (locationPath.includes("/project/") && viewLocation === "/"));
     };
 
     vm.go = function (path) {
