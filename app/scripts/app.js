@@ -7,9 +7,9 @@ if (startchange.length) {
     $(document).scroll(function () {
         scroll_start = $(this).scrollTop();
         if (scroll_start > offset.top) {
-            $(".logo-r").css('visibility', 'hidden');
+            $(".logo-r").css('opacity', '0');
         } else {
-            $('.logo-r').css('visibility', 'visible');
+            $('.logo-r').css('opacity', '1');
         }
     });
 }
