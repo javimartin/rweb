@@ -12,6 +12,7 @@ angular.module('myApp.project', ['ngRoute'])
 
     .controller('ProjectController', ['$routeParams', '$location', '$anchorScroll', 'projectsService', function ($routeParams, $location, $anchorScroll, projectsService) {
         var vm = this;
+        var projectBasePath = "/project"
 
         vm.init = function () {
 
@@ -20,23 +21,22 @@ angular.module('myApp.project', ['ngRoute'])
                 vm.projectIndex = projectsService.getProjectIndex($routeParams.project);
                 vm.project = vm.projects[vm.projectIndex];
 
-                vm.hasNext = (vm.projectIndex < vm.projects.length);
+                vm.hasNext = (vm.projectIndex < vm.projects.length - 1);
                 vm.hasPrev = (vm.projectIndex > 0);
             }, function (error) {
-                // show error
+                // TODO show error
             });
         };
 
-        vm.prev = function () {
-            var prevIndex = vm.projectIndex - 1;
-            var path = "/project/" + vm.projects[prevIndex].name;
-            $anchorScroll();
-            $location.path(path);
-        };
+        /**
+         * Navigates to previous or next project based on the direction parameter
+         *
+         * @param direction indicates where to navigate, -1 for the previous project, +1  for the next project
+         */
+        vm.navigatePrevOrNext = function (direction) {
+            var prevOrNextIndex = vm.projectIndex + parseInt(direction);
+            var path = projectBasePath + "/" + vm.projects[prevOrNextIndex].fields.name;
 
-        vm.next = function () {
-            var nextIndex = vm.prevIndex + 1;
-            var path = "/project/" + vm.projects[nextIndex].name;
             $anchorScroll();
             $location.path(path);
         };
