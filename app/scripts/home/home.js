@@ -17,7 +17,7 @@ angular.module('myApp.home', ['ngRoute'])
             {
                 "name": "september-vacations",
                 "title": "September Vacations",
-                "thumbnail": "https://c2.staticflickr.com/6/5475/30174354883_176704e72b_o.png",
+                "thumbnail": "https://c2.staticflickr.com/6/5800/30810552575_8c3e750455_o.png",
                 "text": "<p>September Vacations is a personal project developed during a trip along Bolivia, Chile and Argentina in September 2016. This collection illustrates a selection of the breathtaking landscapes during the route. </p>",
                 "images": [{"url": "/assets/img/projects/september-vacations/september-vacations1.png"},
                     {"url": "/assets/img/projects/september-vacations/september-vacations2.png"},
@@ -27,7 +27,7 @@ angular.module('myApp.home', ['ngRoute'])
             {
                 "name": "vortex-identity",
                 "title": "Vortex Identity",
-                "thumbnail": "https://c2.staticflickr.com/6/5513/30721049581_d07e60082e_o.png",
+                "thumbnail": "https://c2.staticflickr.com/6/5593/30175559503_4b26b0b620_o.png",
                 "text": "<p>The Vortex Project is my architecture final project, developed with my colleagues Sandra and Laura.</p><p>Vortex proposes a new domestic system, based in the co-living concept, that makes available to the user a fragmented and multi-localized home in constant change.</p><p>We created the entire brand identity. We wanted a very simple concept, giving the word “Vortex” the main role. The corporate image is a monogram created with the first and the last letter of “Vortex”. We play with 3 funny colors to break with the stiffness of the logo. Besides, we designed avatars to represent the users in the project.</p>",
                 "images": [{"url": "/assets/img/projects/vortex-identity/vortextidentity-1.png"},
                     {"url": "/assets/img/projects/vortex-identity/vortextidentity2.png"},
@@ -53,7 +53,7 @@ angular.module('myApp.home', ['ngRoute'])
             postLoop.name = postLoop.title.replace(/\s/g, '-').toLowerCase();
 
             if (i === 2) {
-                postLoop.thumbnail = "https://c2.staticflickr.com/6/5768/30809345625_d241a4112a_o.png"
+                postLoop.thumbnail = "https://c2.staticflickr.com/6/5618/30509660280_b5c93e56a3_o.png"
             }
 
             if (i % 2 === 0 && i !== 2) {

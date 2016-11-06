@@ -294,7 +294,7 @@ p, a {
     }
 
     footer a {
-        padding-left: 25px;
+        padding-left: 20px;
     }
 
     /* -------- BOOTSTRAP column paddings --------- */
@@ -323,7 +323,7 @@ p, a {
     }
 
     body {
-        padding-top: 100px;
+        padding-top: 170px;
     }
 
     /* ------------------ footer ------------------ */
@@ -384,7 +384,7 @@ p, a {
 
 }
 
-@media screen and  (min-width: 1600px) {
+@media screen and  (min-width: 2500px) {
 
     .text1 {
         text-align: center;
@@ -394,7 +394,7 @@ p, a {
     }
 
     body {
-        padding-top: 500px;
+        padding-top: 400px;
     }
 
     /* ------------------ footer ------------------ */
