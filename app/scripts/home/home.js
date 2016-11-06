@@ -60,7 +60,7 @@ angular.module('myApp.home', ['ngRoute'])
                 postLoop.thumbnail = "/assets/img/project1.png"
 
             } else if (i !== 2) {
-                postLoop.thumbnail = "/assets/img/project2.png"
+                postLoop.thumbnail = "https://c3.staticflickr.com/6/5449/30178184474_a84c75a9b6_o.jpg"
 
             }
 
