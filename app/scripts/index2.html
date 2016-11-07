@@ -18,10 +18,27 @@
     <link rel="icon"
           type="image/png"
           href="assets/img/favicon.png">
+
+    <link href="bower_components/PACE/themes/black/pace-theme-minimal.css" rel="stylesheet"/>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/icons.css">
     <link rel="stylesheet" href="styles/styles.css">
+
+    <script>
+        window.paceOptions = {
+            document: true,
+            eventLag: true,
+            restartOnPushState: true,
+            restartOnRequestAfter: true,
+            ajax: {
+                trackMethods: ['POST', 'GET']
+            }
+
+        };
+    </script>
+    <script src="bower_components/PACE/pace.min.js"></script>
+
 
     <script src="//localhost:9091"></script>
 
@@ -38,18 +55,18 @@
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
 
-            <a class="logo-r" href="#!/" ng-click="appCtrl.go('/')">
+            <span class="logo-r" ng-click="appCtrl.go('/')">
                 <span class="icon icon-R"></span>
-            </a>
+            </span>
             <ul class="nav navbar-nav navbar-right navigation">
                 <li ng-class="{active: (appCtrl.isActive('/') || appCtrl.isActive('/project'))}">
-                    <a href="#!/" ng-click="appCtrl.go('/')">projects</a>
+                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')">projects</a>
                 </li>
                 <li ng-class="{active: appCtrl.isActive('/about')}">
-                    <a href="#!/about" ng-click="appCtrl.go('/about')">about</a>
+                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/about')">about</a>
                 </li>
                 <li ng-class="{active: appCtrl.isActive('/contact')}">
-                    <a href="#!/contact" ng-click="appCtrl.go('/contact')">contact</a>
+                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/contact')">contact</a>
                 </li>
             </ul>
         </div>
@@ -61,11 +78,11 @@
 
         <footer>
             <span class="text-right navigation pull-right">
-                <a href="mailto:hello@rocioegio.com">mail</a> <a
-                    href="https://www.facebook.com/rocioegio" target="_blank">facebook</a> <a
-                    href="https://www.instagram.com/rocioegio">instagram</a>
-                <a href="https://www.behance.net/rocioegio14f0" target="_blank">behance</a>
-                <a href="https://www.linkedin.com/rocioegio" target="_blank">linkedin</a>
+                <a onclick="" href="mailto:hello@rocioegio.com">mail</a> <a
+                    onclick="" href="https://www.facebook.com/rocioegio" target="_blank">facebook</a> <a
+                    onclick="" href="https://www.instagram.com/rocioegio" target="_blank">instagram</a>
+                <a onclick="" href="https://www.behance.net/rocioegio14f0" target="_blank">behance</a>
+                <a onclick="" href="https://www.linkedin.com/rocioegio" target="_blank">linkedin</a>
             </span>
         </footer>
     </div>

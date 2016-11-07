@@ -2,7 +2,7 @@
     <div class="col-xs-12">
         <h1 class="text-left project-title">{{::projectCtrl.project.fields.title}}</h1>
         <br>
-        <div ng-bind-html="::projectCtrl.project.fields.body"></div>
+        <p ng-bind-html="::projectCtrl.project.fields.body"></p>
         <br>
     </div>
 </div>
@@ -13,13 +13,13 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-2">
-        <a href="" ng-if="::projectCtrl.hasPrev" ng-click="projectCtrl.navigatePrevOrNext('-1')"><p>< prev</p></a>
+    <div class="col-xs-3 navigation">
+        <a href="javascript:void(0)" ng-if="::projectCtrl.hasPrev" ng-click="projectCtrl.navigatePrevOrNext('-1')"><p>< prev</p></a>
     </div>
-    <div class="col-xs-8">
+    <div class="col-xs-6">
 
     </div>
-    <div class="col-xs-2">
-        <a href="" ng-if="::projectCtrl.hasNext" ng-click="projectCtrl.navigatePrevOrNext('+1')"><p class="btn-nxt">next ></p></a>
+    <div class="col-xs-3 navigation">
+        <a href="javascript:void(0)" ng-if="::projectCtrl.hasNext" ng-click="projectCtrl.navigatePrevOrNext('+1')"><p class="btn-nxt">next ></p></a>
     </div>
 </div>

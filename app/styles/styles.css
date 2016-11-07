@@ -37,6 +37,7 @@
 html,
 body {
     overflow-x: hidden; /* Prevent scroll on narrow devices */
+    color: black;
 }
 
 /* -------- BOOTSTRAP, column paddings, ... --------- */
@@ -123,7 +124,7 @@ a.project-thumbnail:hover {
     padding: 15px 0 30px 0px;
 }
 
-.nav>li>a:focus, .nav>li>a:hover {
+.nav > li > a:focus, .nav > li > a:hover {
     background-color: transparent;
     color: #f19ea2;
 }
@@ -132,7 +133,7 @@ li.active, li.active a {
     color: #f19ea2;
 }
 
-.navbar-nav>li>a {
+.navbar-nav > li > a {
     padding: 0 20px;
 }
 
@@ -143,10 +144,10 @@ ul.nav.navbar-nav {
 /* override navbar collapsing */
 
 .navbar-collapse.collapse {
-    display: block!important;
+    display: block !important;
 }
 
-.navbar-nav>li, .navbar-nav {
+.navbar-nav > li, .navbar-nav {
     float: left !important;
 }
 
@@ -155,9 +156,13 @@ ul.nav.navbar-nav {
 }
 
 .navbar-right {
-    float: right!important;
+    float: right !important;
 }
 
+
+footer {
+    padding-right: 3px;
+}
 
 /* -------------------------------------------- */
 
@@ -216,10 +221,12 @@ a:active {
 .icon-R {
     font-size: 7em;
     font-size: 8.5vw;
+    cursor: pointer;
+    cursor: hand;
 }
 
-h1 {
-    font-size: 20px;
+/*h1 {
+    font-size: 24px;
     font-size: 2vw;
     line-height: 1.5em;
 }
@@ -231,8 +238,8 @@ h2 {
 
 p, a {
     font-size: 10px;
-    font-size: 2.1vmin;
-}
+    font-size: 1vw;
+}*/
 
 .navigation a {
     font-size: 1.2em;
@@ -258,6 +265,31 @@ p, a {
 
 /* Extra small devices (phones, up to 480px) */
 @media screen and (max-width: 767px) {
+
+    .icon-R {
+        font-size: 3.5em;
+    }
+
+    h1 {
+        font-size: 1.3em;
+
+    }
+
+    h2 {
+        font-size: 14px;
+    }
+
+    p, a, body {
+        font-size: 12px;
+    }
+
+    .navigation a {
+        font-size: 0.9em;
+    }
+
+    .project-img-caption span {
+        font-size: 1.2em;
+    }
 
     .text1 {
         text-align: center;
@@ -302,15 +334,14 @@ p, a {
         padding-right: 15px;
         padding-left: 15px;
     }
-
-    .navigation a {
-        font-size: 0.8em;
-    }
-
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991px) {
+
+    .icon-R {
+        font-size: 4em;
+    }
 
     .text1 {
         text-align: center;
@@ -340,12 +371,32 @@ p, a {
         padding-left: 25px;
     }
 
+    .navigation a {
+        font-size: 0.9em;
+    }
+
+    .project-img-caption span {
+        font-size: 0.9em;
+    }
+
     /* -------------------------------------------- */
 
 }
 
 /* tablets/desktops and up ----------- */
 @media screen and  (min-width: 992px) {
+
+    h1 {
+        font-size: 2.3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p, a {
+        font-size: 1em;
+    }
 
     .text1 {
         text-align: center;

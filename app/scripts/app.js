@@ -38,7 +38,10 @@ angular.module('myApp', [
     };
 
     vm.go = function (path) {
+        Pace.restart();
+
         $anchorScroll();
+        $location.path(path);
     };
 
 }]);

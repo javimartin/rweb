@@ -1,6 +1,6 @@
 <div class="row">
     <div ng-repeat="project in homeCtrl.projects" class="col-md-4 col-sm-6 col-xs-12 thumb col-padding">
-        <a class="thumbnail project-thumbnail" ng-href="#!/project/{{::project.fields.name}}">
+        <a class="thumbnail project-thumbnail" href="javascript:void(0)" ng-click="homeCtrl.navigateToProject(project.fields.name)">
             <img class="project-img"  ng-src="https:{{::project.fields.thumbnail.fields.file.url}}" alt="{{::project.fields.title}}"/>
             <p class="project-img-caption">
                 <span>{{::project.fields.title}}</span>

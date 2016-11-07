@@ -10,7 +10,7 @@ angular.module('myApp.home', ['ngRoute'])
         });
     }])
 
-    .controller('HomeController', ['projectsService', '$location', function (projectsService, $location) {
+    .controller('HomeController', ['projectsService', '$location', '$anchorScroll', function (projectsService, $location, $anchorScroll) {
         var vm = this;
 
         vm.init = function () {
@@ -24,4 +24,12 @@ angular.module('myApp.home', ['ngRoute'])
         };
 
         vm.init();
+
+        vm.navigateToProject = function (projectName) {
+            Pace.restart();
+
+            var path = '/project/' + projectName;
+            $anchorScroll();
+            $location.path(path);
+        };
     }]);

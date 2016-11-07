@@ -34,6 +34,8 @@ angular.module('myApp.project', ['ngRoute'])
          * @param direction indicates where to navigate, -1 for the previous project, +1  for the next project
          */
         vm.navigatePrevOrNext = function (direction) {
+            Pace.restart();
+
             var prevOrNextIndex = vm.projectIndex + parseInt(direction);
             var path = projectBasePath + "/" + vm.projects[prevOrNextIndex].fields.name;
 
