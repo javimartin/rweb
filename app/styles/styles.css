@@ -320,7 +320,7 @@ p, a {
     }
 
     .navigation a {
-        font-size: 0.9em;
+        font-size: 1em;
     }
 
     .project-img-caption span {
@@ -348,11 +348,11 @@ p, a {
     }
 
     .navbar-nav > li {
-        min-height: 30px;
+        min-height: 45px;
     }
 
     .navbar-nav > li > a {
-        padding-top: 7px;
+        padding-top: 12px;
     }
 
     .navbar {
