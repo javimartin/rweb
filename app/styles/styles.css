@@ -330,18 +330,6 @@ p, a {
         margin-bottom: 50px;
     }
 
-    .navbar {
-        padding-top: 30px;
-    }
-
-    #navbar-collapse {
-        background-color: white;
-    }
-
-    .logo-r {
-       padding-left: 25px;
-    }
-
     body {
         padding-top: 110px;
     }
@@ -354,6 +342,24 @@ p, a {
     .menu-nav ul li:nth-child(3) { /* third item */
         padding-left: 20px;
 
+    }
+
+    .navbar-nav > li {
+        min-height: 30px;
+    }
+    .navbar-nav > li > a{
+        padding-top: 7px;
+    }
+    .navbar {
+        padding-top: 30px;
+    }
+
+    #navbar-collapse {
+        background-color: white;
+    }
+
+    .logo-r {
+        padding-left: 25px;
     }
 
     /* ------------------ footer ------------------ */
