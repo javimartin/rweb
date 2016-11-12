@@ -108,6 +108,21 @@ a.project-thumbnail:hover {
     vertical-align: top;
 }
 
+.language-xs {
+    display: inline-block;
+    float: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    padding-right: 15px;
+}
+
+ul.language-xs > li {
+    display:inline;
+    padding-left: 15px;
+}
+
 .navbar-brand {
     padding: 0;
 }
@@ -149,7 +164,11 @@ ul.nav.navbar-nav {
     margin-top: 0;
 }
 
-/* override navbar collapsing */
+.navbar-toggle .icon-bar {
+    background-color: black;
+}
+
+/* override navbar collapsing
 
 .navbar-collapse.collapse {
     display: block !important;
@@ -165,7 +184,7 @@ ul.nav.navbar-nav {
 
 .navbar-right {
     float: right !important;
-}
+}*/
 
 
 footer {
@@ -229,8 +248,8 @@ a:active {
 .icon-R {
     font-size: 7em;
     font-size: 8.5vw;
-    cursor: pointer;
-    cursor: hand;
+    position: absolute;
+    top: 40px;
 }
 
 /*h1 {
@@ -311,6 +330,10 @@ p, a {
 
     .navbar {
         padding-top: 30px;
+    }
+
+    #navbar-collapse {
+        background-color: white;
     }
 
     body {
