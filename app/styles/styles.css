@@ -168,6 +168,10 @@ ul.nav.navbar-nav {
     background-color: black;
 }
 
+.logo-r {
+    padding-left: 5px;
+}
+
 /* override navbar collapsing
 
 .navbar-collapse.collapse {
@@ -248,8 +252,6 @@ a:active {
 .icon-R {
     font-size: 7em;
     font-size: 8.5vw;
-    position: absolute;
-    top: 40px;
 }
 
 /*h1 {
@@ -334,6 +336,10 @@ p, a {
 
     #navbar-collapse {
         background-color: white;
+    }
+
+    .logo-r {
+       padding-left: 25px;
     }
 
     body {
