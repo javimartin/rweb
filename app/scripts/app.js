@@ -9,7 +9,7 @@ angular.module('myApp', [
     'myApp.about',
     'myApp.contact',
     'myApp.project',
-    'myApp.projectsService',
+    'myApp.contentfulService',
     'myApp.storageService'
 ]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');

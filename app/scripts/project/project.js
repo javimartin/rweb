@@ -10,15 +10,15 @@ angular.module('myApp.project', ['ngRoute'])
         });
     }])
 
-    .controller('ProjectController', ['$rootScope', '$routeParams', '$location', '$anchorScroll', 'projectsService', function ($rootScope, $routeParams, $location, $anchorScroll, projectsService) {
+    .controller('ProjectController', ['$rootScope', '$routeParams', '$location', '$anchorScroll', 'contentfulService', function ($rootScope, $routeParams, $location, $anchorScroll, contentfulService) {
         var vm = this;
         var projectBasePath = "/project"
 
         vm.init = function () {
 
-            projectsService.getProjects().then(function (data) {
+            contentfulService.getProjects().then(function (data) {
                 vm.projects = data;
-                vm.projectIndex = projectsService.getProjectIndex($routeParams.project);
+                vm.projectIndex = contentfulService.getProjectIndex($routeParams.project);
                 vm.project = vm.projects[vm.projectIndex];
 
                 // use the field body for EN, bodyFR for FR or bodyES for ES

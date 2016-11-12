@@ -3,15 +3,19 @@
 /**
  * Service handling the connection to Contentful CMS API to retrieve project info.
  */
-angular.module('myApp.projectsService', [])
-    .service('projectsService', ["$window", "$q", function ($window, $q) {
+angular.module('myApp.contentfulService', [])
+    .service('contentfulService', ["$window", "$q", function ($window, $q) {
         var client = contentful.createClient({
             space: 'fvqgat31yo0h',
             accessToken: '105b53ff041218ff0f02b193dd99a1484612ad4d838a586271874af3e34c054f'
         });
         var contentfulPostTypeId = "2wKn6yEnZewu2SCCkus4as";
+        var aboutPageId = "25n2U0xKUMucU6eYKCUcea";
+        var contactPageId = "lN0fiFrX3wqOYaGCeIGas";
 
         var projects;
+        var aboutPageContent;
+        var contactPageContent;
 
         /* Returns a project from given projects object based on the name. */
         var _findProjectByName = function (name, projects) {
@@ -72,5 +76,43 @@ angular.module('myApp.projectsService', [])
             });
 
             return index;
+        };
+
+        /* Calls contentful API to retrieve the object about page, stores them in about page var. */
+        this.getAboutPageContent = function () {
+            var deferred = $q.defer();
+
+            if (!aboutPageContent || _.isUndefined(aboutPageContent)) {
+                client.getEntry(aboutPageId).then(function (data) {
+                    aboutPageContent = data;
+
+                    deferred.resolve(aboutPageContent)
+                }, function (error) {
+                    deferred.reject(error)
+                });
+            } else {
+                deferred.resolve(aboutPageContent)
+            }
+
+            return deferred.promise;
+        };
+
+        /* Calls contentful API to retrieve the object contact page, stores them in about page var. */
+        this.getContactPageContent = function () {
+            var deferred = $q.defer();
+
+            if (!contactPageContent || _.isUndefined(contactPageContent)) {
+                client.getEntry(contactPageId).then(function (data) {
+                    contactPageContent = data;
+
+                    deferred.resolve(contactPageContent)
+                }, function (error) {
+                    deferred.reject(error)
+                });
+            } else {
+                deferred.resolve(contactPageContent)
+            }
+
+            return deferred.promise;
         };
     }]);

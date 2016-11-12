@@ -10,12 +10,12 @@ angular.module('myApp.home', ['ngRoute'])
         });
     }])
 
-    .controller('HomeController', ['projectsService', '$location', '$anchorScroll', function (projectsService, $location, $anchorScroll) {
+    .controller('HomeController', ['contentfulService', '$location', '$anchorScroll', function (contentfulService, $location, $anchorScroll) {
         var vm = this;
 
         vm.init = function () {
 
-            projectsService.getProjects().then(function (data) {
+            contentfulService.getProjects().then(function (data) {
                 vm.projects = data;
             }, function (error) {
                 // TODO show error
