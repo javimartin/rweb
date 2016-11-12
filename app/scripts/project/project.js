@@ -10,7 +10,7 @@ angular.module('myApp.project', ['ngRoute'])
         });
     }])
 
-    .controller('ProjectController', ['$routeParams', '$location', '$anchorScroll', 'projectsService', function ($routeParams, $location, $anchorScroll, projectsService) {
+    .controller('ProjectController', ['$rootScope', '$routeParams', '$location', '$anchorScroll', 'projectsService', function ($rootScope, $routeParams, $location, $anchorScroll, projectsService) {
         var vm = this;
         var projectBasePath = "/project"
 
@@ -20,6 +20,12 @@ angular.module('myApp.project', ['ngRoute'])
                 vm.projects = data;
                 vm.projectIndex = projectsService.getProjectIndex($routeParams.project);
                 vm.project = vm.projects[vm.projectIndex];
+
+                // use the field body for EN, bodyFR for FR or bodyES for ES
+                var body = ($rootScope.lang === "EN") ? "body" : "body" + $rootScope.lang;
+
+                // if body is empty, use english as default
+                vm.projectBody  = (_.isEmpty(vm.project.fields[body])) ? vm.project.fields["body"] : vm.project.fields[body];
 
                 vm.hasNext = (vm.projectIndex < vm.projects.length - 1);
                 vm.hasPrev = (vm.projectIndex > 0);

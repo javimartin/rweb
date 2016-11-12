@@ -137,6 +137,14 @@ li.active, li.active a {
     padding: 0 20px;
 }
 
+.navbar-nav > li > a.lang {
+    padding: 0 5px;
+}
+
+.navbar-nav > li:nth-child(4) > a {
+    padding-left: 20px;
+}
+
 ul.nav.navbar-nav {
     margin-top: 0;
 }
@@ -283,6 +291,10 @@ p, a {
         font-size: 12px;
     }
 
+    .glyphicon {
+        font-size: 10px;
+    }
+
     .navigation a {
         font-size: 0.9em;
     }
@@ -396,6 +408,10 @@ p, a {
 
     p, a {
         font-size: 1em;
+    }
+
+    .glyphicon {
+        font-size: 0.8em;
     }
 
     .text1 {

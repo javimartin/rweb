@@ -60,13 +60,22 @@
             </span>
             <ul class="nav navbar-nav navbar-right navigation">
                 <li ng-class="{active: (appCtrl.isActive('/') || appCtrl.isActive('/project'))}">
-                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')">projects</a>
+                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')"><span ng-bind="navigation[0]"></span></a>
                 </li>
                 <li ng-class="{active: appCtrl.isActive('/about')}">
-                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/about')">about</a>
+                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/about')"><span ng-bind="navigation[1]"></span></a>
                 </li>
                 <li ng-class="{active: appCtrl.isActive('/contact')}">
-                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/contact')">contact</a>
+                    <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/contact')"><span ng-bind="navigation[2]"></span></a>
+                </li>
+                <li ng-class="{active: appCtrl.isSelectedLanguage('EN')}">
+                    <a onclick="" class="lang" href="javascript:void(0)" ng-click="appCtrl.changeLanguage('EN')">en</a>
+                </li>
+                <li ng-class="{active: appCtrl.isSelectedLanguage('FR')}">
+                    <a onclick="" class="lang" href="javascript:void(0)" ng-click="appCtrl.changeLanguage('FR')">fr</a>
+                </li>
+                <li ng-class="{active: appCtrl.isSelectedLanguage('ES')}">
+                    <a onclick="" class="lang" href="javascript:void(0)" ng-click="appCtrl.changeLanguage('ES')">es</a>
                 </li>
             </ul>
         </div>
@@ -95,8 +104,9 @@
 <script src="bower_components/angular-animate/angular-animate.min.js"></script>
 <script src="bower_components/angular-sanitize/angular-sanitize.min.js  "></script>
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="https://unpkg.com/contentful@latest/browser-dist/contentful.min.js"></script>
+<script src="https://unpkg.com/contentful@3.7.1/browser-dist/contentful.min.js"></script>
 <script src="scripts/app.js"></script>
+<script src="scripts/services/storage-service.js"></script>
 <script src="scripts/services/projects-service.js"></script>
 <script src="scripts/home/home.js"></script>
 <script src="scripts/about/about.js"></script>
