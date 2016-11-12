@@ -29,6 +29,10 @@
     padding-bottom: 60px;
 }
 
+.mt-0 {
+    margin-top: 0;
+}
+
 /* -------------- CORE  -------------- */
 * {
     font-family: 'Montserrat', sans-serif;
@@ -119,7 +123,7 @@ a.project-thumbnail:hover {
 }
 
 ul.language-xs > li {
-    display:inline;
+    display: inline;
     padding-left: 15px;
 }
 
@@ -169,7 +173,7 @@ ul.nav.navbar-nav {
 }
 
 .logo-r {
-    padding-left: 5px;
+    padding-left: 20px;
 }
 
 /* override navbar collapsing
@@ -189,7 +193,6 @@ ul.nav.navbar-nav {
 .navbar-right {
     float: right !important;
 }*/
-
 
 footer {
     padding-right: 3px;
@@ -296,7 +299,7 @@ p, a {
 @media screen and (max-width: 767px) {
 
     .icon-R {
-        font-size: 3.5em;
+        font-size: 3.9em !important;
     }
 
     h1 {
@@ -331,7 +334,7 @@ p, a {
     }
 
     body {
-        padding-top: 110px;
+        padding-top: 160px;
     }
 
     /* -------------- MENU nav bar -------------- */
@@ -347,9 +350,11 @@ p, a {
     .navbar-nav > li {
         min-height: 30px;
     }
-    .navbar-nav > li > a{
+
+    .navbar-nav > li > a {
         padding-top: 7px;
     }
+
     .navbar {
         padding-top: 30px;
     }
@@ -360,6 +365,7 @@ p, a {
 
     .logo-r {
         padding-left: 25px;
+        padding-top: 15px;
     }
 
     /* ------------------ footer ------------------ */
