@@ -13,13 +13,10 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-xs-3 col-padding navigation">
+    <div class="col-xs-6 navigation">
         <a href="javascript:void(0)" ng-if="::projectCtrl.hasPrev" ng-click="projectCtrl.navigatePrevOrNext('-1')"><p><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> <span ng-bind="navigation[3]"></span></p></a>
     </div>
-    <div class="col-xs-6 col-padding">
-
-    </div>
-    <div class="col-xs-3 col-padding navigation">
+    <div class="col-xs-6 navigation">
         <a href="javascript:void(0)" ng-if="::projectCtrl.hasNext" ng-click="projectCtrl.navigatePrevOrNext('+1')"><p class="btn-nxt"><span ng-bind="navigation[4]"></span> <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></p></a>
     </div>
 </div>

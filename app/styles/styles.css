@@ -326,11 +326,11 @@ p, a {
     }
 
     .navigation a {
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 
     .project-img-caption span {
-        font-size: 1.2em;
+        font-size: 1.4em;
     }
 
     .text1 {
@@ -366,7 +366,7 @@ p, a {
     }
 
     #navbar-collapse {
-        background-color: white;
+        background-color: #fcfcfc;
     }
 
     .logo-r {
@@ -376,21 +376,27 @@ p, a {
     /* ------------------ footer ------------------ */
     footer {
         padding-top: 35px;
-        margin-bottom: 35px;
-    }
-
-    footer .icon {
-        padding-bottom: 35px;
+        padding-bottom: 70px;
     }
 
     footer a {
-        padding-left: 1px;
+        padding-left: 10px;
+        line-height: 25px;
     }
 
     /* -------- BOOTSTRAP column paddings --------- */
     .col-padding {
         padding-right: 15px;
         padding-left: 15px;
+    }
+
+    #logoR:hover {
+        color: black;
+    }
+
+    #logoR {
+        min-height: 100px;
+        min-width: 80px;
     }
 }
 
@@ -434,7 +440,16 @@ p, a {
     }
 
     .project-img-caption span {
-        font-size: 0.9em;
+        font-size: 1em;
+    }
+
+    #logoR:hover {
+        color: black;
+    }
+
+    #logoR {
+        min-height: 100px;
+        min-width: 80px;
     }
 
     /* -------------------------------------------- */
