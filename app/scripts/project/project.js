@@ -14,6 +14,28 @@ angular.module('myApp.project', ['ngRoute'])
         var vm = this;
         var projectBasePath = "/project"
 
+
+        function _setBodyLanguageText() {
+            // use the field body for EN, bodyFR for FR or bodyES for ES
+            var body = ($rootScope.lang === "EN") ? "body" : "body" + $rootScope.lang;
+
+            // if body is empty, use english as default
+            vm.projectBody = (_.isEmpty(vm.project.fields[body])) ? vm.project.fields["body"] : vm.project.fields[body];
+        }
+
+        function _setAfterImagesBodyLanguageText() {
+            // use the field body for EN, bodyFR for FR or bodyES for ES
+            var afterImagesBody = ($rootScope.lang === "EN") ? "afterImagesBody" : "afterImagesBody" + $rootScope.lang;
+
+            // if body is empty, use english as default
+            vm.projectAfterImagesBody = (_.isEmpty(vm.project.fields[afterImagesBody])) ? vm.project.fields["afterImagesBody"] : vm.project.fields[afterImagesBody];
+        }
+
+        function _setAfterAndNextButtons() {
+            vm.hasNext = (vm.projectIndex < vm.projects.length - 1);
+            vm.hasPrev = (vm.projectIndex > 0);
+        }
+
         vm.init = function () {
 
             contentfulService.getProjects().then(function (data) {
@@ -21,14 +43,11 @@ angular.module('myApp.project', ['ngRoute'])
                 vm.projectIndex = contentfulService.getProjectIndex($routeParams.project);
                 vm.project = vm.projects[vm.projectIndex];
 
-                // use the field body for EN, bodyFR for FR or bodyES for ES
-                var body = ($rootScope.lang === "EN") ? "body" : "body" + $rootScope.lang;
+                _setBodyLanguageText();
+                _setAfterImagesBodyLanguageText();
 
-                // if body is empty, use english as default
-                vm.projectBody  = (_.isEmpty(vm.project.fields[body])) ? vm.project.fields["body"] : vm.project.fields[body];
+                _setAfterAndNextButtons();
 
-                vm.hasNext = (vm.projectIndex < vm.projects.length - 1);
-                vm.hasPrev = (vm.projectIndex > 0);
             }, function (error) {
                 // TODO show error
             });

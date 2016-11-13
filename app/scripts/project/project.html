@@ -9,14 +9,27 @@
 
 <div class="row">
     <div ng-repeat="image in ::projectCtrl.project.fields.images" class="col-xs-12 col-padding thumb pb-15">
-        <img class="img-responsive" ng-src="https:{{::image.fields.file.url}}" alt="">
+        <img class="img-responsive" ng-src="https:{{::image.fields.file.url}}"
+             alt="{{::projectCtrl.project.fields.title}} - image">
     </div>
 </div>
+
+<div ng-if="::projectCtrl.projectAfterImagesBody" class="row">
+    <div class="col-xs-12 col-padding">
+        <p ng-bind-html="::projectCtrl.projectAfterImagesBody"></p>
+        <br>
+    </div>
+</div>
+
 <div class="row">
     <div class="col-xs-6 navigation">
-        <a href="javascript:void(0)" ng-if="::projectCtrl.hasPrev" ng-click="projectCtrl.navigatePrevOrNext('-1')"><p><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> <span ng-bind="navigation[3]"></span></p></a>
+        <a href="javascript:void(0)" ng-if="::projectCtrl.hasPrev" ng-click="projectCtrl.navigatePrevOrNext('-1')"><p>
+            <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> <span ng-bind="navigation[3]"></span>
+        </p></a>
     </div>
     <div class="col-xs-6 navigation">
-        <a href="javascript:void(0)" ng-if="::projectCtrl.hasNext" ng-click="projectCtrl.navigatePrevOrNext('+1')"><p class="btn-nxt"><span ng-bind="navigation[4]"></span> <span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></p></a>
+        <a href="javascript:void(0)" ng-if="::projectCtrl.hasNext" ng-click="projectCtrl.navigatePrevOrNext('+1')"><p
+                class="btn-nxt"><span ng-bind="navigation[4]"></span> <span class="glyphicon glyphicon-menu-right"
+                                                                            aria-hidden="true"></span></p></a>
     </div>
 </div>
