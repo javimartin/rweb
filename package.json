@@ -19,9 +19,8 @@
     "copy:assets": "copyfiles -u 1 'app/assets/**/*' dist/",
 
     "copy:index": "copyfiles -u 2 'app/scripts/index.html' dist/",
-    "copy:index2": "copyfiles -u 2 'app/scripts/index2.html' dist/",
 
-    "build:src": "copyfiles -u 1 'app/scripts/**/*' dist/ && rm dist/scripts/index.html && npm run copy:index && npm run copy:index2",
+    "build:src": "copyfiles -u 1 'app/scripts/**/*' dist/ && rm dist/scripts/index.html && npm run copy:index",
     "watch:src": "watch 'npm run build:src' app/scripts/",
 
     "build:css": "copyfiles -u 1 'app/styles/**/*.css' dist/",
