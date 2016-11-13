@@ -173,7 +173,13 @@ ul.nav.navbar-nav {
 }
 
 .logo-r {
-    padding-left: 20px;
+    padding-left: 15px;
+    padding-top: 15px;
+    margin-left: 0;
+}
+
+.logo-r-container {
+    position: absolute;
 }
 
 /* override navbar collapsing
@@ -320,7 +326,7 @@ p, a {
     }
 
     .navigation a {
-        font-size: 1em;
+        font-size: 1.3em;
     }
 
     .project-img-caption span {
@@ -364,8 +370,7 @@ p, a {
     }
 
     .logo-r {
-        padding-left: 25px;
-        padding-top: 15px;
+        padding-left: 15px;
     }
 
     /* ------------------ footer ------------------ */
@@ -379,7 +384,7 @@ p, a {
     }
 
     footer a {
-        padding-left: 20px;
+        padding-left: 1px;
     }
 
     /* -------- BOOTSTRAP column paddings --------- */

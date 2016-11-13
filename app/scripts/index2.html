@@ -51,7 +51,13 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
         your browser</a> to improve your experience.</p>
     <![endif]-->
-
+    <div class="navbar navbar-fixed-top logo-r-container">
+        <div class="container-fluid">
+            <a class="logo-r navbar-brand" onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')">
+                <span class="icon icon-R"></span>
+            </a>
+        </div>
+    </div>
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -64,9 +70,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-                <a class="logo-r navbar-brand" onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')">
-                    <span class="icon icon-R"></span>
-                </a>
+
                 <ul class="pull-right navigation language-xs visible-xs">
                     <li ng-class="{active: appCtrl.isSelectedLanguage('EN')}">
                         <a onclick="" class="lang" href="javascript:void(0)"
@@ -88,15 +92,18 @@
 
                 <ul class="nav navbar-nav navbar-right navigation pr-15">
                     <li ng-class="{active: (appCtrl.isActive('/') || appCtrl.isActive('/project'))}">
-                        <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')"><span
+                        <a data-toggle="collapse" data-target=".navbar-collapse" onclick="" href="javascript:void(0)"
+                           ng-click="appCtrl.go('/')"><span
                                 ng-bind="navigation[0]"></span></a>
                     </li>
                     <li ng-class="{active: appCtrl.isActive('/about')}">
-                        <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/about')"><span
+                        <a data-toggle="collapse" data-target=".navbar-collapse" onclick="" href="javascript:void(0)"
+                           ng-click="appCtrl.go('/about')"><span
                                 ng-bind="navigation[1]"></span></a>
                     </li>
                     <li ng-class="{active: appCtrl.isActive('/contact')}">
-                        <a onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/contact')"><span
+                        <a data-toggle="collapse" data-target=".navbar-collapse" onclick="" href="javascript:void(0)"
+                           ng-click="appCtrl.go('/contact')"><span
                                 ng-bind="navigation[2]"></span></a>
                     </li>
                     <li class="hidden-xs" ng-class="{active: appCtrl.isSelectedLanguage('EN')}">
