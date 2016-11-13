@@ -39,9 +39,7 @@
     </script>
     <script src="bower_components/PACE/pace.min.js"></script>
 
-
-    <script src="//localhost:9091"></script>
-
+    <!--<script src="//localhost:9091"></script>-->
 </head>
 
 
@@ -53,9 +51,9 @@
     <![endif]-->
     <div class="navbar navbar-fixed-top logo-r-container">
         <div class="container-fluid">
-           <a id="logoR" class="logo-r navbar-brand" onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')">
-                    <span class="icon icon-R"></span>
-                </a>
+            <a id="logoR" class="logo-r navbar-brand" onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')">
+                <span class="icon icon-R"></span>
+            </a>
             </ul>
 
         </div>
@@ -156,5 +154,19 @@
 <script src="scripts/about/about.js"></script>
 <script src="scripts/contact/contact.js"></script>
 <script src="scripts/project/project.js"></script>
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+</script>
 </body>
 </html>

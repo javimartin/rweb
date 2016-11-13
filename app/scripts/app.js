@@ -11,7 +11,17 @@ angular.module('myApp', [
     'myApp.project',
     'myApp.contentfulService',
     'myApp.storageService'
-]).config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+])
+    .run(['$rootScope', '$location', '$window', function ($rootScope, $location, $window) {
+        // initialise google analytics
+        $window.ga('create', 'UA-87344008-1', 'auto');
+
+        // track pageview on state change
+        $rootScope.$on('$routeChangeSuccess', function (event) {
+            $window.ga('send', 'pageview', $location.path());
+        });
+    }])
+    .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
     $locationProvider.hashPrefix('!');
     $routeProvider.otherwise({redirectTo: '/'});
 
