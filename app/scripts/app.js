@@ -18,7 +18,8 @@ angular.module('myApp', [
 
         // track pageview on state change
         $rootScope.$on('$routeChangeSuccess', function (event) {
-            $window.ga('send', 'pageview', $location.path());
+            var pageView = $location.path() + "?lang=" + $rootScope.lang;
+            $window.ga('send', 'pageview', pageView);
         });
     }])
     .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
