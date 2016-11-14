@@ -235,7 +235,7 @@ a:active {
 .text-home {
     padding-bottom: 110px;
     line-height: 56px;
-    font-size: 2.6em;
+    font-size: 2.3em;
 }
 
 .icon-R {
@@ -286,9 +286,7 @@ a:active {
     }
 
     .text-home {
-        padding-bottom: 110px;
-        line-height: 46px;
-        font-size: 2.6em;
+        line-height: 42px;
     }
 
     .glyphicon {
