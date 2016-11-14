@@ -1,5 +1,9 @@
 'use strict';
 
+if (!("ontouchstart" in document.documentElement)) {
+    document.documentElement.className += " no-touch";
+}
+
 // Declare app level module which depends on views, and components
 angular.module('myApp', [
     'ngSanitize',

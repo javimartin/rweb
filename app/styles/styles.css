@@ -72,19 +72,19 @@ body {
     opacity: 1;
 }
 
-.thumb a:hover .project-img-caption {
+.no-touch .thumb a:hover .project-img-caption {
     visibility: visible;
 }
 
-a.project-thumbnail:hover {
+.no-touch a.project-thumbnail:hover {
     background-color: white;
 }
 
-.project-img:hover, .thumbnail:hover img {
+.no-touch .project-img:hover, .thumbnail:hover img {
     visibility: hidden;
 }
 
-.thumb a:hover .project-img-caption span {
+.no-touch .thumb a:hover .project-img-caption span {
     visibility: visible;
 }
 
