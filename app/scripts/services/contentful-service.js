@@ -12,10 +12,12 @@ angular.module('myApp.contentfulService', [])
         var contentfulPostTypeId = "2wKn6yEnZewu2SCCkus4as";
         var aboutPageId = "25n2U0xKUMucU6eYKCUcea";
         var contactPageId = "lN0fiFrX3wqOYaGCeIGas";
+        var textHomePageId = "6BszYZh2uWsUIky2SYMo4k";
 
         var projects;
         var aboutPageContent;
         var contactPageContent;
+        var textHomePage;
 
         /* Returns a project from given projects object based on the name. */
         var _findProjectByName = function (name, projects) {
@@ -111,6 +113,26 @@ angular.module('myApp.contentfulService', [])
                 });
             } else {
                 deferred.resolve(contactPageContent)
+            }
+
+            return deferred.promise;
+        };
+
+
+        /* Calls contentful API to retrieve the object text home page, stores them in about page var. */
+        this.getTextHomePage = function () {
+            var deferred = $q.defer();
+
+            if (!textHomePage || _.isUndefined(textHomePage)) {
+                client.getEntry(textHomePageId).then(function (data) {
+                    textHomePage = data;
+
+                    deferred.resolve(textHomePage)
+                }, function (error) {
+                    deferred.reject(error)
+                });
+            } else {
+                deferred.resolve(textHomePage)
             }
 
             return deferred.promise;
