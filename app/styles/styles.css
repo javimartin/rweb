@@ -234,7 +234,7 @@ a:active {
 
 .text-home {
     padding-bottom: 110px;
-    line-height: 56px;
+    line-height: 50px;
     font-size: 2.3em;
 }
 
@@ -286,7 +286,7 @@ a:active {
     }
 
     .text-home {
-        line-height: 42px;
+        line-height: 38px;
     }
 
     .glyphicon {
@@ -393,6 +393,9 @@ a:active {
         padding-top: 170px;
     }
 
+    .text-home {
+        line-height: 46px;
+    }
     /* ------------------ footer ------------------ */
     footer {
         padding-top: 45px;
