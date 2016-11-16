@@ -17,7 +17,6 @@ angular.module('myApp.home', ['ngRoute'])
 
             contentfulService.getTextHomePage().then(function (data) {
 
-
                 // use the field body for EN, bodyFR for FR or bodyES for ES
                 var body = ($rootScope.lang === "EN") ? "body" : "body" + $rootScope.lang;
 
@@ -30,6 +29,13 @@ angular.module('myApp.home', ['ngRoute'])
 
             contentfulService.getProjects().then(function (data) {
                 vm.projects = data;
+                _.forEach(vm.projects, function (project) {
+                    // use the field title for EN, titleFR for FR or titleES for ES
+                    var title = ($rootScope.lang === "EN") ? "title" : "title" + $rootScope.lang;
+
+                    // if title is empty, use english as default
+                    project.fields.projectTitle = (_.isEmpty(project.fields[title])) ? project.fields["title"] : project.fields[title];
+                });
             }, function (error) {
                 // TODO show error
             });

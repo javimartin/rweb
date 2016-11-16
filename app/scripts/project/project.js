@@ -23,6 +23,14 @@ angular.module('myApp.project', ['ngRoute'])
             vm.projectBody = (_.isEmpty(vm.project.fields[body])) ? vm.project.fields["body"] : vm.project.fields[body];
         }
 
+        function _setTitleLanguageText() {
+            // use the field title for EN, titleFR for FR or titleES for ES
+            var title = ($rootScope.lang === "EN") ? "title" : "title" + $rootScope.lang;
+
+            // if title is empty, use english as default
+            vm.projectTitle = (_.isEmpty(vm.project.fields[title])) ? vm.project.fields["title"] : vm.project.fields[title];
+        }
+
         function _setAfterImagesBodyLanguageText() {
             // use the field body for EN, bodyFR for FR or bodyES for ES
             var afterImagesBody = ($rootScope.lang === "EN") ? "afterImagesBody" : "afterImagesBody" + $rootScope.lang;
@@ -44,6 +52,7 @@ angular.module('myApp.project', ['ngRoute'])
                 vm.project = vm.projects[vm.projectIndex];
 
                 _setBodyLanguageText();
+                _setTitleLanguageText();
                 _setAfterImagesBodyLanguageText();
 
                 _setAfterAndNextButtons();
