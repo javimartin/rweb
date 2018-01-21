@@ -158,6 +158,7 @@ li.active, li.active a {
 
 .navbar-nav > li > a {
     padding: 0 20px;
+    font-weight: bold !important;
 }
 
 .navbar-nav > li > a.lang {
@@ -188,6 +189,10 @@ ul.nav.navbar-nav {
 
 footer {
     padding-right: 3px;
+}
+
+.rocioegio-header {
+    color: #E73F37;
 }
 
 /* -------------------------------------------- */
@@ -243,6 +248,12 @@ a:active {
     font-size: 8.5vw;
 }
 
+.rocioegio-header {
+    font-weight: bold !important;
+    font-size: 7.5em;
+    font-size: 7.5vw;
+}
+
 .navigation a {
     font-size: 1.2em;
     font-size: 1.2vw;
@@ -251,6 +262,7 @@ a:active {
 .project-img-caption span {
     font-size: 1.4em;
     font-size: 1.4vw;
+    font-weight: bold;
 }
 
 .img-card {
@@ -265,6 +277,10 @@ a:active {
     background-color: #fad3d1;
 }
 
+h1 {
+    font-weight: bold;
+}
+
 /* Extra small devices (phones, up to 480px) */
 @media screen and (max-width: 767px) {
 
@@ -272,9 +288,12 @@ a:active {
         font-size: 3.9em !important;
     }
 
+    .rocioegio-header {
+        font-size: 3.9em !important;
+    }
+
     h1 {
         font-size: 1.3em;
-
     }
 
     h2 {
@@ -377,6 +396,10 @@ a:active {
 @media (min-width: 768px) and (max-width: 991px) {
 
     .icon-R {
+        font-size: 4em;
+    }
+
+    .rocioegio-header {
         font-size: 4em;
     }
 

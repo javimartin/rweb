@@ -54,13 +54,20 @@
     <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
         your browser</a> to improve your experience.</p>
     <![endif]-->
-    <div class="navbar navbar-fixed-top logo-r-container">
+    <!-- <div class="navbar navbar-fixed-top logo-r-container">
         <div class="container-fluid">
             <a id="logoR" class="logo-r navbar-brand" onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')">
                 <span class="icon icon-R"></span>
             </a>
             </ul>
 
+        </div>
+    </div> -->
+    <div class="navbar navbar-fixed-top logo-r-container">
+        <div class="container-fluid">
+            <a  onclick="" href="javascript:void(0)" ng-click="appCtrl.go('/')">
+                <h1 class="rocioegio-header">roci&#769;o egi&#769;o</h1>
+            </a>
         </div>
     </div>
     <nav class="navbar navbar-fixed-top">
@@ -75,21 +82,6 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 </button>
-
-                <ul class="pull-right navigation language-xs visible-xs">
-                    <li ng-class="{active: appCtrl.isSelectedLanguage('EN')}">
-                        <a onclick="" class="lang" href="javascript:void(0)"
-                           ng-click="appCtrl.changeLanguage('EN')">en</a>
-                    </li>
-                    <li ng-class="{active: appCtrl.isSelectedLanguage('FR')}">
-                        <a onclick="" class="lang" href="javascript:void(0)"
-                           ng-click="appCtrl.changeLanguage('FR')">fr</a>
-                    </li>
-                    <li ng-class="{active: appCtrl.isSelectedLanguage('ES')}">
-                        <a onclick="" class="lang" href="javascript:void(0)"
-                           ng-click="appCtrl.changeLanguage('ES')">es</a>
-                    </li>
-                </ul>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -110,18 +102,6 @@
                         <a data-toggle="collapse" data-target=".navbar-collapse" onclick="" href="javascript:void(0)"
                            ng-click="appCtrl.go('/contact')"><span
                                 ng-bind="navigation[2]"></span></a>
-                    </li>
-                    <li class="hidden-xs" ng-class="{active: appCtrl.isSelectedLanguage('EN')}">
-                        <a onclick="" class="lang" href="javascript:void(0)"
-                           ng-click="appCtrl.changeLanguage('EN')">en</a>
-                    </li>
-                    <li class="hidden-xs" ng-class="{active: appCtrl.isSelectedLanguage('FR')}">
-                        <a onclick="" class="lang" href="javascript:void(0)"
-                           ng-click="appCtrl.changeLanguage('FR')">fr</a>
-                    </li>
-                    <li class="hidden-xs" ng-class="{active: appCtrl.isSelectedLanguage('ES')}">
-                        <a onclick="" class="lang" href="javascript:void(0)"
-                           ng-click="appCtrl.changeLanguage('ES')">es</a>
                     </li>
                 </ul>
             </div>
