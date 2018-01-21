@@ -158,7 +158,6 @@ li.active, li.active a {
 
 .navbar-nav > li > a {
     padding: 0 20px;
-    font-weight: bold !important;
 }
 
 .navbar-nav > li > a.lang {
@@ -262,7 +261,6 @@ a:active {
 .project-img-caption span {
     font-size: 1.4em;
     font-size: 1.4vw;
-    font-weight: bold;
 }
 
 .img-card {
@@ -275,10 +273,6 @@ a:active {
 
 .bg-pink {
     background-color: #fad3d1;
-}
-
-h1 {
-    font-weight: bold;
 }
 
 /* Extra small devices (phones, up to 480px) */
