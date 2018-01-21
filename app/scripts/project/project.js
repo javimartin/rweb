@@ -28,7 +28,7 @@ angular.module('myApp.project', ['ngRoute'])
             var title = ($rootScope.lang === "EN") ? "title" : "title" + $rootScope.lang;
 
             // if title is empty, use english as default
-            vm.projectTitle = (_.isEmpty(vm.project.fields[title])) ? vm.project.fields["title"] : vm.project.fields[title];
+            vm.project.projectTitle = (_.isEmpty(vm.project.fields[title])) ? vm.project.fields["title"] : vm.project.fields[title];
         }
 
         function _setAfterImagesBodyLanguageText() {

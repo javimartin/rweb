@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-xs-12 col-padding">
-        <h1 class="mt-0 text-left project-title">{{::projectCtrl.projectTitle}}</h1>
+        <h1 class="mt-0 text-left project-title">{{::projectCtrl.project.projectTitle}}</h1>
+        <h3 class="mt-0 text-left project-category">{{::projectCtrl.project.fields.category}}</h2>
         <br>
         <p ng-bind-html="::projectCtrl.projectBody"></p>
         <br>
