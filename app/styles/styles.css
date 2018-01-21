@@ -149,11 +149,11 @@ ul.language-xs > li {
 
 .nav > li > a:focus, .nav > li > a:hover {
     background-color: transparent;
-    color: #f19ea2;
+    color: #E73F37;
 }
 
 li.active, li.active a {
-    color: #f19ea2;
+    color: #E73F37;
 }
 
 .navbar-nav > li > a {
@@ -222,12 +222,12 @@ a:visited {
 
 a:hover {
     text-decoration: none;
-    color: #f19ea2;
+    color: #E73F37;
 }
 
 a:active {
     text-decoration: none;
-    color: #f19ea2;
+    color: #E73F37;
 }
 
 /* --------------------- Font sizes ------------------------ */
